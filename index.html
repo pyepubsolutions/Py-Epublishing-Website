@@ -33,7 +33,7 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 .mobile-menu a{color:white;font-size:18px;}
 .mobile-menu.active{right:0;}
 
-/* HERO UPGRADE */
+/* HERO SECTION */
 .hero {
     height: 100vh;
     display: flex;
@@ -49,6 +49,8 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
     position: relative;
     z-index: 1;
     max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
     animation: fadeIn 1.5s ease forwards;
 }
 .hero h1 {
@@ -99,7 +101,6 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
     color: white;
     transform: scale(1.05);
 }
-
 .typing {
     color: #a855f7;
     border-right: 3px solid #a855f7;
@@ -111,7 +112,7 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 .section{padding:120px 8%;position:relative;transition:0.5s;}
 .section h2{font-size:36px;margin-bottom:40px;text-align:center;color:#a855f7;}
 
-/* SERVICES CARDS WITH HOVER BANNER */
+/* SERVICES CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
 .card{background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:25px;overflow:hidden;position:relative;opacity:0;transform:translateY(50px);transition:0.5s;text-align:center;}
 .card .card-front,.card .card-back{position:relative;padding:25px;display:flex;flex-direction:column;align-items:center;transition:0.5s;}
@@ -178,7 +179,7 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
   <h1>We Create <span class="typing" id="typing"></span></h1>
   <p class="hero-subtitle">High-quality ePub, XML, Logo, Poster & Thumbnail services worldwide.</p>
   <div class="hero-buttons">
-    <a href="mailto:Pyepubsolutions@gmail.com" class="btn btn-primary pulse">Get Free Quote</a>
+    <a href="https://wa.me/919385315022?text=Hello!%20I%20am%20interested%20in%20your%20services" class="btn btn-primary pulse">Get Free Quote</a>
     <a href="#services" class="btn btn-secondary">Our Services</a>
   </div>
 </div>
@@ -257,7 +258,7 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 <li>3 initial concepts</li>
 <li>Unlimited revisions</li>
 </ul>
-<a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
+<a href="https://wa.me/919385315022?text=Hello!%20I%20want%20Logo%20Design" class="btn">Get Started</a>
 </div>
 
 <div class="pricing-card recommended">
@@ -268,7 +269,7 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 <li>Clickable & engaging</li>
 <li>2 revisions</li>
 </ul>
-<a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
+<a href="https://wa.me/919385315022?text=Hello!%20I%20want%20YouTube%20Thumbnail" class="btn">Get Started</a>
 </div>
 
 <div class="pricing-card">
@@ -279,7 +280,7 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 <li>Print & digital ready</li>
 <li>High resolution</li>
 </ul>
-<a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
+<a href="https://wa.me/919385315022?text=Hello!%20I%20want%20Poster%20or%20Banner" class="btn">Get Started</a>
 </div>
 
 <div class="pricing-card">
@@ -290,7 +291,7 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 <li>Compatible with all devices</li>
 <li>Editable support</li>
 </ul>
-<a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
+<a href="https://wa.me/919385315022?text=Hello!%20I%20want%20Word%20to%20PDF/ePub" class="btn">Get Started</a>
 </div>
 
 </div>
@@ -332,6 +333,7 @@ canvas.height=window.innerHeight;
 const particles=[];
 class Particle{constructor(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*3+1;this.speedX=Math.random()*1-0.5;this.speedY=Math.random()*1-0.5;}
 update(){this.x+=this.speedX;this.y+=this.speedY;if(this.x>canvas.width||this.x<0){this.speedX*=-1;}if(this.y>canvas.height||this.y<0){this.speedY*=-1;}}
+
 draw(){ctx.fillStyle='rgba(168,85,247,0.7)';ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill();}}
 function initParticles(){particles.length=0;for(let i=0;i<150;i++){particles.push(new Particle());}}
 function animateParticles(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.update();p.draw();});requestAnimationFrame(animateParticles);}
