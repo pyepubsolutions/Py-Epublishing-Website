@@ -43,7 +43,7 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
     position: relative;
     overflow: hidden;
     padding: 0 20px;
-    background: linear-gradient(135deg, #0f172a, #1e293b); /* simple classic gradient */
+    background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 .hero-content {
     position: relative;
@@ -112,8 +112,9 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 /* SECTIONS */
 .section{padding:120px 8%;position:relative;transition:0.5s;}
 .section h2{font-size:36px;margin-bottom:40px;text-align:center;color:#a855f7;}
+.section p{text-align:center;font-size:18px;line-height:1.8;color:#e0e0e0;}
 
-/* SERVICES CARDS */
+/* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
 .card{background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:25px;overflow:hidden;position:relative;opacity:0;transform:translateY(50px);transition:0.5s;text-align:center;}
 .card .card-front,.card .card-back{position:relative;padding:25px;display:flex;flex-direction:column;align-items:center;transition:0.5s;}
@@ -139,7 +140,6 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 .pricing-card ul li::before{content:'✔';position:absolute;left:0;color:#a855f7;font-weight:bold;font-size:16px;}
 
 /* CONTACT & FOOTER */
-#contact p{text-align:center;font-size:18px;line-height:1.8;}
 footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-spacing:0.5px;}
 
 /* RESPONSIVE */
@@ -162,6 +162,10 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="hamburger" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
@@ -170,6 +174,10 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
   <a href="#home" onclick="closeMenu()">Home</a>
   <a href="#services" onclick="closeMenu()">Services</a>
   <a href="#pricing" onclick="closeMenu()">Pricing</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+  <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
@@ -189,7 +197,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 <section class="section" id="services">
 <h2>Our Services</h2>
 <div class="cards">
-
 <div class="card">
   <div class="card-front">
     <img src="https://via.placeholder.com/400x200.png?text=Logo+Design" alt="Logo Design">
@@ -202,7 +209,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
     <p>Hover to see sample logos and premium concepts.</p>
   </div>
 </div>
-
 <div class="card">
   <div class="card-front">
     <img src="https://via.placeholder.com/400x200.png?text=Thumbnail+Design" alt="Thumbnail">
@@ -215,7 +221,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
     <p>Hover to preview custom thumbnail designs.</p>
   </div>
 </div>
-
 <div class="card">
   <div class="card-front">
     <img src="https://via.placeholder.com/400x200.png?text=Poster+Banner" alt="Poster Banner">
@@ -228,7 +233,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
     <p>Hover to see poster/banner samples.</p>
   </div>
 </div>
-
 <div class="card">
   <div class="card-front">
     <img src="https://via.placeholder.com/400x200.png?text=Word+to+PDF" alt="Word to PDF">
@@ -241,7 +245,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
     <p>Hover to preview formatted PDF/ePub output.</p>
   </div>
 </div>
-
 </div>
 </section>
 
@@ -249,7 +252,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 <section class="section" id="pricing">
 <h2>Pricing Plans</h2>
 <div class="pricing-cards">
-
 <div class="pricing-card">
 <h3>Logo Design</h3>
 <p class="price">₹500 / Logo</p>
@@ -260,7 +262,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 </ul>
 <a href="https://wa.me/919385315022?text=Hello!%20I%20want%20Logo%20Design" class="btn">Get Started</a>
 </div>
-
 <div class="pricing-card recommended">
 <h3>YouTube Thumbnail</h3>
 <p class="price">₹150 / Thumbnail</p>
@@ -271,7 +272,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 </ul>
 <a href="https://wa.me/919385315022?text=Hello!%20I%20want%20YouTube%20Thumbnail" class="btn">Get Started</a>
 </div>
-
 <div class="pricing-card">
 <h3>Poster / Banner</h3>
 <p class="price">₹400 / Poster</p>
@@ -282,7 +282,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 </ul>
 <a href="https://wa.me/919385315022?text=Hello!%20I%20want%20Poster%20or%20Banner" class="btn">Get Started</a>
 </div>
-
 <div class="pricing-card">
 <h3>Word to PDF / ePub</h3>
 <p class="price">₹20 / Page</p>
@@ -293,8 +292,66 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 </ul>
 <a href="https://wa.me/919385315022?text=Hello!%20I%20want%20Word%20to%20PDF/ePub" class="btn">Get Started</a>
 </div>
-
 </div>
+</section>
+
+<!-- ABOUT US -->
+<section class="section" id="about">
+<h2>About Us</h2>
+<p>Py Epublishing Solutions is dedicated to delivering high-quality digital publishing and graphic design services. 
+We help brands, creators, and businesses bring their ideas to life with professional logos, thumbnails, posters, and ePub/PDF conversion.</p>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section" id="portfolio">
+<h2>Our Portfolio</h2>
+<div class="cards">
+<div class="card"><img src="https://via.placeholder.com/400x200.png?text=Logo+Sample" alt="Portfolio"><h3>Logo Sample</h3></div>
+<div class="card"><img src="https://via.placeholder.com/400x200.png?text=Thumbnail+Sample" alt="Portfolio"><h3>Thumbnail Sample</h3></div>
+<div class="card"><img src="https://via.placeholder.com/400x200.png?text=Poster+Sample" alt="Portfolio"><h3>Poster Sample</h3></div>
+<div class="card"><img src="https://via.placeholder.com/400x200.png?text=PDF+Sample" alt="Portfolio"><h3>PDF Sample</h3></div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+<h2>What Our Clients Say</h2>
+<div class="cards">
+<div class="card">
+<i class="fa-solid fa-user"></i>
+<h3>Ravi Kumar</h3>
+<p>"Excellent logo design service! Highly professional."</p>
+</div>
+<div class="card">
+<i class="fa-solid fa-user"></i>
+<h3>Priya Sharma</h3>
+<p>"Thumbnails and banners exceeded my expectations!"</p>
+</div>
+<div class="card">
+<i class="fa-solid fa-user"></i>
+<h3>Ajay Singh</h3>
+<p>"Fast, reliable, and amazing Word to PDF conversion."</p>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+<h2>Frequently Asked Questions</h2>
+<div style="max-width:900px;margin:0 auto;">
+<p><strong>Q:</strong> How long does it take to get a logo design?<br>
+<strong>A:</strong> Usually 2–3 days depending on complexity.</p>
+<p><strong>Q:</strong> Can I request revisions?<br>
+<strong>A:</strong> Yes! Unlimited revisions for logo design.</p>
+<p><strong>Q:</strong> What file formats do you provide?<br>
+<strong>A:</strong> JPEG, PNG, PDF, and editable PSD/AI files if requested.</p>
+</div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="section" style="background:#1e293b;text-align:center;">
+<h2 style="color:#f472b6;">Ready to Start Your Project?</h2>
+<a href="https://wa.me/919385315022?text=Hello!%20I%20am%20interested%20in%20your%20services" class="btn btn-primary">Get Your Free Quote Now</a>
 </section>
 
 <!-- CONTACT -->
