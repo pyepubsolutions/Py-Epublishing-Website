@@ -18,7 +18,7 @@ nav{
   top:0;
   width:100%;
   display:flex;
-  justify-content:space-between; /* Company left, links right */
+  justify-content:space-between;
   align-items:center;
   padding:15px 8%;
   z-index:1000;
@@ -71,7 +71,6 @@ nav{
 .hero canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;}
 .hero-content{position:relative;z-index:1;}
 .hero h1{font-size:48px;margin-bottom:20px;}
-.hero h1 .company-name{color:#a855f7;display:block;font-size:36px;margin-bottom:15px;}
 .typing{color:#a855f7;border-right:3px solid #a855f7;animation:blink 0.7s infinite;}
 @keyframes blink{50%{border-color:transparent;}}
 .hero p{max-width:650px;margin-bottom:30px;font-size:18px;}
@@ -92,25 +91,18 @@ nav{
 .card:hover{transform:rotateY(5deg) rotateX(5deg) translateY(-10px);box-shadow:0 20px 40px rgba(168,85,247,0.5);}
 .card:hover i{transform:scale(1.3) rotate(20deg);}
 
-/* PRICING CARDS FLIP */
+/* PRICING UPGRADE */
 .pricing-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
-.pricing-card{perspective:1000px;}
-.pricing-inner{position:relative;width:100%;transition:0.8s;transform-style:preserve-3d;border-radius:25px;cursor:pointer;}
-.pricing-card:hover .pricing-inner{transform:rotateY(180deg);}
-.pricing-front, .pricing-back{position:absolute;width:100%;backface-visibility:hidden;padding:25px;border-radius:25px;}
-.pricing-front{background:rgba(0,0,0,0.6);}
-.pricing-back{background:#a855f7;color:white;transform:rotateY(180deg);display:flex;flex-direction:column;justify-content:center;align-items:center;}
-.pricing-back .btn{margin-top:20px;width:80%;}
+.pricing-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);padding:30px;border-radius:25px;position:relative;overflow:hidden;transition:0.5s;cursor:pointer;}
+.pricing-card:hover{transform:scale(1.05);box-shadow:0 15px 40px rgba(168,85,247,0.6);}
+.pricing-card.recommended{border:2px solid #a855f7;}
+.pricing-card h3{margin-bottom:15px;}
+.pricing-card p.price{font-size:24px;font-weight:bold;margin-bottom:15px;color:#a855f7;}
+.pricing-card ul{list-style:none;margin-bottom:20px;}
+.pricing-card ul li{margin-bottom:10px;position:relative;padding-left:20px;}
+.pricing-card ul li::before{content:'✔';position:absolute;left:0;color:#a855f7;}
 
-/* TESTIMONIALS */
-.testimonial-section{margin-top:50px;}
-.testimonial-container{position:relative;overflow:hidden;border-radius:20px;}
-.testimonial{min-width:100%;padding:25px;background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:20px;text-align:center;opacity:0;transition:0.5s;transform:scale(0.95);}
-.testimonial.active{opacity:1;transform:scale(1);}
-.testimonial p{font-style:italic;margin-bottom:10px;}
-.testimonial h4{margin-top:5px;color:#a855f7;font-weight:bold;}
-
-/* FOOTER & CTA */
+/* CONTACT & FOOTER */
 footer{text-align:center;padding:30px;background:#0f172a;}
 .whatsapp{position:fixed;bottom:20px;left:20px;background:#25D366;color:white;padding:15px;border-radius:50%;font-size:20px;box-shadow:0 5px 20px rgba(0,0,0,0.3);}
 .sticky-cta{position:fixed;bottom:20px;right:20px;background:#a855f7;color:white;padding:15px 18px;border-radius:50px;font-size:14px;box-shadow:0 5px 20px rgba(0,0,0,0.3);transition:0.3s;}
@@ -141,7 +133,6 @@ footer{text-align:center;padding:30px;background:#0f172a;}
   </div>
   <div class="hamburger" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
 </nav>
-
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home" onclick="closeMenu()">Home</a>
   <a href="#services" onclick="closeMenu()">Services</a>
@@ -154,131 +145,73 @@ footer{text-align:center;padding:30px;background:#0f172a;}
 <section class="hero" id="home">
 <canvas id="particleCanvas"></canvas>
 <div class="hero-content">
-  
+  <h1>We Create <span class="typing" id="typing"></span></h1>
   <p>High-quality ePub, XML, and Kindle solutions worldwide.</p>
   <a href="mailto:Pyepubsolutions@gmail.com" class="btn pulse">Get Free Quote</a>
 </div>
 </section>
-  <!-- SERVICES -->
+
+<!-- SERVICES -->
 <section class="section" id="services">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">
-      <i class="fa-solid fa-book fa-2x"></i>
-      <h3>ePub Conversion</h3>
-      <p>Professional ePub 2 & 3 files.</p>
-    </div>
-    <div class="card">
-      <i class="fa-solid fa-code fa-2x"></i>
-      <h3>XML Workflow</h3>
-      <p>Structured XML for journals & books.</p>
-    </div>
-    <div class="card">
-      <i class="fa-brands fa-amazon fa-2x"></i>
-      <h3>Kindle Formatting</h3>
-      <p>Amazon KDP ready support.</p>
-    </div>
-  </div>
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card"><i class="fa-solid fa-book fa-2x"></i><h3>ePub Conversion</h3><p>Professional ePub 2 & 3 files.</p></div>
+<div class="card"><i class="fa-solid fa-code fa-2x"></i><h3>XML Workflow</h3><p>Structured XML for journals & books.</p></div>
+<div class="card"><i class="fa-brands fa-amazon fa-2x"></i><h3>Kindle Formatting</h3><p>Amazon KDP ready support.</p></div>
+</div>
 </section>
 
 <!-- ABOUT -->
 <section class="section" id="about">
-  <h2>About Us</h2>
-  <p>Py Epublishing Solutions delivers high-quality digital publishing services worldwide with accuracy, speed, and global compatibility.</p>
+<h2>About Us</h2>
+<p>Py Epublishing Solutions delivers high-quality digital publishing services worldwide with accuracy, speed, and global compatibility.</p>
 </section>
 
-<!-- PRICING -->
+<!-- PRICING UPGRADED -->
 <section class="section" id="pricing">
-  <h2>Pricing</h2>
-  <div class="pricing-cards">
-    <div class="pricing-card">
-      <div class="pricing-inner">
-        <div class="pricing-front">
-          <h3>Basic ePub</h3>
-          <p>₹10 / Page</p>
-          <ul>
-            <li>Standard ePub formatting</li>
-            <li>Compatible with all devices</li>
-            <li>Email support</li>
-          </ul>
-        </div>
-        <div class="pricing-back">
-          <i class="fa-solid fa-book-open fa-3x"></i>
-          <p>Perfect for standard eBooks & journals.</p>
-          <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="pricing-card">
-      <div class="pricing-inner">
-        <div class="pricing-front">
-          <h3>Advanced ePub</h3>
-          <p>₹15 / Page</p>
-          <ul>
-            <li>Interactive ePub features</li>
-            <li>Enhanced graphics & images</li>
-            <li>Email + Call support</li>
-          </ul>
-        </div>
-        <div class="pricing-back">
-          <i class="fa-solid fa-gem fa-3x"></i>
-          <p>Best for interactive eBooks & magazines.</p>
-          <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="pricing-card">
-      <div class="pricing-inner">
-        <div class="pricing-front">
-          <h3>XML Conversion</h3>
-          <p>₹20 / Page</p>
-          <ul>
-            <li>Journals & Books XML tagging</li>
-            <li>Validation-ready files</li>
-            <li>Support included</li>
-          </ul>
-        </div>
-        <div class="pricing-back">
-          <i class="fa-solid fa-file-code fa-3x"></i>
-          <p>Structured XML for journals & books.</p>
-          <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
-        </div>
-      </div>
-    </div>
+<h2>Pricing Plans</h2>
+<div class="pricing-cards">
+  <div class="pricing-card">
+    <h3>Basic ePub</h3>
+    <p class="price">₹20 / Page</p>
+    <ul>
+      <li>Standard ePub formatting</li>
+      <li>All devices compatible</li>
+      <li>Email support</li>
+    </ul>
+    <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
   </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section testimonial-section">
-  <h2>Testimonials</h2>
-  <div class="testimonial-container">
-    <div class="testimonial active">
-      <p>"Py Epublishing transformed our manuscripts into interactive ePub seamlessly!"</p>
-      <h4>- John Doe</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Amazing XML tagging for our journals with perfect validation."</p>
-      <h4>- Sarah Lee</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Kindle formatting done professionally and quickly."</p>
-      <h4>- Mike Smith</h4>
-    </div>
+  <div class="pricing-card recommended">
+    <h3>Advanced ePub</h3>
+    <p class="price">₹30 / Page</p>
+    <ul>
+      <li>Interactive ePub features</li>
+      <li>Enhanced graphics & images</li>
+      <li>Email + Call support</li>
+    </ul>
+    <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
   </div>
+  <div class="pricing-card">
+    <h3>XML Conversion</h3>
+    <p class="price">₹25 / Page</p>
+    <ul>
+      <li>Journals & Books XML tagging</li>
+      <li>Validation-ready files</li>
+      <li>Support included</li>
+    </ul>
+    <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
+  </div>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>📧 <a href="mailto:Pyepubsolutions@gmail.com" style="color:#a855f7;">Pyepubsolutions@gmail.com</a></p>
+<h2>Contact Us</h2>
+<p>📧 <a href="mailto:Pyepubsolutions@gmail.com" style="color:#a855f7;">Pyepubsolutions@gmail.com</a></p>
 </section>
 
 <!-- FOOTER -->
 <footer>© 2026 Py Epublishing Solutions</footer>
-
-<!-- WHATSAPP CTA -->
 <a href="https://wa.me/91YOURNUMBER" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <!-- SCRIPTS -->
@@ -323,16 +256,6 @@ window.addEventListener("scroll",()=>{
   });
 });
 
-// TESTIMONIAL CAROUSEL
-let testimonialIndex=0;
-const testimonials=document.querySelectorAll(".testimonial");
-function showTestimonials(){
-  testimonials.forEach(t=>t.classList.remove("active"));
-  testimonials[testimonialIndex].classList.add("active");
-  testimonialIndex=(testimonialIndex+1)%testimonials.length;
-}
-setInterval(showTestimonials,4000);
-
 // PARTICLE BACKGROUND
 const canvas=document.getElementById("particleCanvas");
 const ctx=canvas.getContext("2d");
@@ -367,5 +290,3 @@ window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.heig
 </script>
 </body>
 </html>
-
-<!-- Continue Services, About, Pricing, Testimonials, Contact sections as previous code -->
