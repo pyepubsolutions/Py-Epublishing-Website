@@ -13,7 +13,8 @@ a{transition:0.3s;text-decoration:none;}
 a:hover{text-decoration:none;}
 
 /* NAVBAR */
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:flex-end;padding:15px 8%;z-index:1000;background:rgba(15,23,42,0.7);backdrop-filter:blur(10px);}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 8%;z-index:1000;background:rgba(15,23,42,0.7);backdrop-filter:blur(10px);}
+.nav-title{font-size:22px;font-weight:bold;color:#a855f7;}
 .nav-links{display:flex;gap:25px;}
 .nav-links a{color:white;font-weight:500;}
 .nav-links a.active{color:#a855f7;}
@@ -28,6 +29,7 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:flex-end;paddin
 .hero canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;}
 .hero-content{position:relative;z-index:1;}
 .hero h1{font-size:48px;margin-bottom:20px;}
+.hero h1 .company-name{color:#a855f7;display:block;font-size:36px;margin-bottom:15px;}
 .typing{color:#a855f7;border-right:3px solid #a855f7;animation:blink 0.7s infinite;}
 @keyframes blink{50%{border-color:transparent;}}
 .hero p{max-width:650px;margin-bottom:30px;font-size:18px;}
@@ -87,6 +89,7 @@ footer{text-align:center;padding:30px;background:#0f172a;}
 
 <!-- NAVBAR -->
 <nav>
+  <div class="nav-title">Py Epublishing Solutions</div>
   <div class="nav-links">
     <a href="#home">Home</a>
     <a href="#services">Services</a>
@@ -108,12 +111,11 @@ footer{text-align:center;padding:30px;background:#0f172a;}
 <section class="hero" id="home">
 <canvas id="particleCanvas"></canvas>
 <div class="hero-content">
-  <h1>We Create <span class="typing" id="typing"></span></h1>
+  <h1><span class="company-name">Py Epublishing Solutions</span>We Create <span class="typing" id="typing"></span></h1>
   <p>High-quality ePub, XML, and Kindle solutions worldwide.</p>
   <a href="mailto:Pyepubsolutions@gmail.com" class="btn pulse">Get Free Quote</a>
 </div>
 </section>
-
 <!-- SERVICES -->
 <section class="section" id="services">
 <h2>Our Services</h2>
@@ -152,6 +154,7 @@ footer{text-align:center;padding:30px;background:#0f172a;}
 </div>
 </div>
 </div>
+
 <div class="pricing-card">
 <div class="pricing-inner">
 <div class="pricing-front">
@@ -170,6 +173,7 @@ footer{text-align:center;padding:30px;background:#0f172a;}
 </div>
 </div>
 </div>
+
 <div class="pricing-card">
 <div class="pricing-inner">
 <div class="pricing-front">
@@ -219,50 +223,75 @@ function closeMenu(){document.getElementById("mobileMenu").classList.remove("act
 const textArray=["ePub Files","XML Workflows","Kindle Books"];
 let i=0,j=0,isDeleting=false;
 const typing=document.getElementById("typing");
-function type(){if(i<textArray.length){
-if(!isDeleting && j<=textArray[i].length){typing.textContent=textArray[i].substring(0,j++);}
-if(isDeleting && j>=0){typing.textContent=textArray[i].substring(0,j--);}
-if(j==textArray[i].length){isDeleting=true;}
-if(isDeleting && j==0){isDeleting=false;i++;}
-if(i==textArray.length){i=0;}}
-setTimeout(type,100);}
+function type(){
+  if(i<textArray.length){
+    if(!isDeleting && j<=textArray[i].length){typing.textContent=textArray[i].substring(0,j++);}
+    if(isDeleting && j>=0){typing.textContent=textArray[i].substring(0,j--);}
+    if(j==textArray[i].length){isDeleting=true;}
+    if(isDeleting && j==0){isDeleting=false;i++;}
+    if(i==textArray.length){i=0;}
+  }
+  setTimeout(type,100);
+}
 type();
 
 // SCROLL REVEAL
 window.addEventListener("scroll",()=>{
-document.querySelectorAll(".card,.pricing-card").forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){el.classList.add("show");}
-});
+  document.querySelectorAll(".card,.pricing-card").forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){el.classList.add("show");}
+  });
 });
 
 // NAV HIGHLIGHT
 const sections=document.querySelectorAll("section");
 const navLinks=document.querySelectorAll(".nav-links a");
 window.addEventListener("scroll",()=>{
-let scrollPos=window.scrollY+150;
-sections.forEach(sec=>{
-if(scrollPos>=sec.offsetTop && scrollPos<sec.offsetTop+sec.offsetHeight){
-navLinks.forEach(l=>l.classList.remove("active"));
-document.querySelector('.nav-links a[href="#'+sec.id+'"]')?.classList.add("active");
-}
-});
+  let scrollPos=window.scrollY+150;
+  sections.forEach(sec=>{
+    if(scrollPos>=sec.offsetTop && scrollPos<sec.offsetTop+sec.offsetHeight){
+      navLinks.forEach(l=>l.classList.remove("active"));
+      document.querySelector('.nav-links a[href="#'+sec.id+'"]')?.classList.add("active");
+    }
+  });
 });
 
 // TESTIMONIAL CAROUSEL
 let testimonialIndex=0;
 const testimonials=document.querySelectorAll(".testimonial");
-function showTestimonials(){testimonials.forEach(t=>t.classList.remove("active"));
-testimonials[testimonialIndex].classList.add("active");testimonialIndex=(testimonialIndex+1)%testimonials.length;}
+function showTestimonials(){
+  testimonials.forEach(t=>t.classList.remove("active"));
+  testimonials[testimonialIndex].classList.add("active");
+  testimonialIndex=(testimonialIndex+1)%testimonials.length;
+}
 setInterval(showTestimonials,4000);
 
 // PARTICLE BACKGROUND
 const canvas=document.getElementById("particleCanvas");
 const ctx=canvas.getContext("2d");
-canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 const particles=[];
-class Particle{constructor(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=Math.random()*3+1;this.speedX=Math.random()*1-0.5;this.speedY=Math.random()*1-0.5;}
-update(){this.x+=this.speedX;this.y+=this.speedY;if(this.x>canvas.width||this.x<0){this.speedX*=-1;}if(this.y>canvas.height||this.y<0){this.speedY*=-1;}}
-draw(){ctx.fillStyle='rgba(168,85,247,0.7)';ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill();}}
+class Particle{
+  constructor(){
+    this.x=Math.random()*canvas.width;
+    this.y=Math.random()*canvas.height;
+    this.size=Math.random()*3+1;
+    this.speedX=Math.random()*1-0.5;
+    this.speedY=Math.random()*1-0.5;
+  }
+  update(){
+    this.x+=this.speedX;
+    this.y+=this.speedY;
+    if(this.x>canvas.width||this.x<0){this.speedX*=-1;}
+    if(this.y>canvas.height||this.y<0){this.speedY*=-1;}
+  }
+  draw(){
+    ctx.fillStyle='rgba(168,85,247,0.7)';
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+    ctx.fill();
+  }
+}
 function initParticles(){particles.length=0;for(let i=0;i<150;i++){particles.push(new Particle());}}
 function animateParticles(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.update();p.draw();});requestAnimationFrame(animateParticles);}
 initParticles();animateParticles();
