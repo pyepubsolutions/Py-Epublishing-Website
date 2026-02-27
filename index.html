@@ -41,16 +41,19 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 .section{padding:120px 8%;position:relative;transition:0.5s;}
 .section h2{font-size:36px;margin-bottom:40px;text-align:center;color:#a855f7;}
 
-/* SERVICES */
+/* SERVICES CARDS WITH HOVER BANNER */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
-.card{background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);padding:35px;border-radius:25px;opacity:0;transform:translateY(50px);transition:0.5s;text-align:center;}
-.card img{width:100%;border-radius:15px;margin-bottom:20px;}
-.card i{margin-bottom:15px;color:#a855f7;transition:0.5s;font-size:30px;}
-.card h3{margin-bottom:15px;font-size:22px;}
+.card{background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:25px;overflow:hidden;position:relative;opacity:0;transform:translateY(50px);transition:0.5s;text-align:center;}
+.card .card-front,.card .card-back{position:relative;padding:25px;display:flex;flex-direction:column;align-items:center;transition:0.5s;}
+.card .card-back{position:absolute;top:0;left:0;width:100%;height:100%;background:#1e293b;color:white;opacity:0;display:flex;justify-content:center;align-items:center;flex-direction:column;padding:20px;}
+.card:hover .card-back{opacity:1;}
+.card img{width:100%;border-radius:15px;margin-bottom:15px;}
+.card i{margin-bottom:10px;color:#a855f7;transition:0.5s;font-size:30px;}
+.card h3{margin-bottom:10px;font-size:22px;}
 .card p{font-size:16px;line-height:1.5;}
 .card.show{opacity:1;transform:translateY(0);}
-.card:hover{transform:rotateY(5deg) rotateX(5deg) translateY(-10px);box-shadow:0 20px 40px rgba(168,85,247,0.5);}
-.card:hover i{transform:scale(1.3) rotate(20deg);}
+.card:hover{transform:translateY(-10px) rotateY(5deg) rotateX(5deg);box-shadow:0 20px 40px rgba(168,85,247,0.5);}
+.card:hover i{transform:scale(1.2) rotate(10deg);}
 
 /* PRICING */
 .pricing-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
@@ -62,10 +65,6 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 .pricing-card ul{list-style:none;margin-bottom:25px;}
 .pricing-card ul li{margin-bottom:12px;position:relative;padding-left:25px;font-size:16px;}
 .pricing-card ul li::before{content:'✔';position:absolute;left:0;color:#a855f7;font-weight:bold;font-size:16px;}
-
-/* POSTER / BANNER */
-.banner{position:relative;width:100%;margin-bottom:80px;border-radius:25px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.5);}
-.banner img{width:100%;height:auto;display:block;}
 
 /* CONTACT & FOOTER */
 #contact p{text-align:center;font-size:18px;line-height:1.8;}
@@ -119,30 +118,63 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 <section class="section" id="services">
 <h2>Our Services</h2>
 <div class="cards">
+
+<!-- Logo Design Card -->
 <div class="card">
-<img src="https://via.placeholder.com/400x200.png?text=Logo+Design" alt="Logo Design">
-<i class="fa-solid fa-image"></i>
-<h3>Logo Design</h3>
-<p>Custom logos for your brand identity.</p>
+  <div class="card-front">
+    <img src="https://via.placeholder.com/400x200.png?text=Logo+Design" alt="Logo Design">
+    <i class="fa-solid fa-image"></i>
+    <h3>Logo Design</h3>
+    <p>Custom logos for your brand identity.</p>
+  </div>
+  <div class="card-back">
+    <img src="https://via.placeholder.com/350x150.png?text=Logo+Banner" alt="Logo Banner">
+    <p>Hover to see sample logos and premium concepts.</p>
+  </div>
 </div>
+
+<!-- YouTube Thumbnail Card -->
 <div class="card">
-<img src="https://via.placeholder.com/400x200.png?text=Thumbnail+Design" alt="Thumbnail">
-<i class="fa-solid fa-camera"></i>
-<h3>YouTube Thumbnail</h3>
-<p>Eye-catching thumbnails to grow your channel.</p>
+  <div class="card-front">
+    <img src="https://via.placeholder.com/400x200.png?text=Thumbnail+Design" alt="Thumbnail">
+    <i class="fa-solid fa-camera"></i>
+    <h3>YouTube Thumbnail</h3>
+    <p>Eye-catching thumbnails to grow your channel.</p>
+  </div>
+  <div class="card-back">
+    <img src="https://via.placeholder.com/350x150.png?text=Thumbnail+Sample" alt="Thumbnail Sample">
+    <p>Hover to preview custom thumbnail designs.</p>
+  </div>
 </div>
+
+<!-- Poster / Banner Card -->
 <div class="card">
-<img src="https://via.placeholder.com/400x200.png?text=Poster+Banner" alt="Poster Banner">
-<i class="fa-solid fa-image-portrait"></i>
-<h3>Poster / Banner</h3>
-<p>Premium posters and banners for marketing campaigns.</p>
+  <div class="card-front">
+    <img src="https://via.placeholder.com/400x200.png?text=Poster+Banner" alt="Poster Banner">
+    <i class="fa-solid fa-image-portrait"></i>
+    <h3>Poster / Banner</h3>
+    <p>Premium posters and banners for marketing campaigns.</p>
+  </div>
+  <div class="card-back">
+    <img src="https://via.placeholder.com/350x150.png?text=Poster+Sample" alt="Poster Sample">
+    <p>Hover to see poster/banner samples.</p>
+  </div>
 </div>
+
+<!-- Word to PDF Card -->
 <div class="card">
-<img src="https://via.placeholder.com/400x200.png?text=Word+to+PDF" alt="Word to PDF">
-<i class="fa-solid fa-file-pdf"></i>
-<h3>Word to PDF / ePub</h3>
-<p>Convert Word documents to professional PDF or ePub files.</p>
+  <div class="card-front">
+    <img src="https://via.placeholder.com/400x200.png?text=Word+to+PDF" alt="Word to PDF">
+    <i class="fa-solid fa-file-pdf"></i>
+    <h3>Word to PDF / ePub</h3>
+    <p>Convert Word documents to professional PDF or ePub files.</p>
+  </div>
+  <div class="card-back">
+    <img src="https://via.placeholder.com/350x150.png?text=PDF+Sample" alt="PDF Sample">
+    <p>Hover to preview formatted PDF/ePub output.</p>
+  </div>
 </div>
+
 </div>
 </section>
 
@@ -160,7 +192,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 </ul>
 <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
 </div>
-
 <div class="pricing-card recommended">
 <h3>YouTube Thumbnail</h3>
 <p class="price">₹150 / Thumbnail</p>
@@ -171,7 +202,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 </ul>
 <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
 </div>
-
 <div class="pricing-card">
 <h3>Poster / Banner</h3>
 <p class="price">₹400 / Poster</p>
@@ -182,7 +212,6 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 </ul>
 <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
 </div>
-
 <div class="pricing-card">
 <h3>Word to PDF / ePub</h3>
 <p class="price">₹20 / Page</p>
