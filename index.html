@@ -11,49 +11,54 @@
 <style>
 /* Reset & base */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;scroll-behavior:smooth;}
-body{color:white;overflow-x:hidden;line-height:1.6;}
+body{color:white;overflow-x:hidden;transition:0.5s;background:#0f172a;}
+body.light{background:#f5f5f5;color:#1e293b;}
+a{transition:0.3s;}
+a:hover{text-decoration:none;}
 
 /* NAVBAR */
-nav{
-position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 8%;z-index:1000;
-background:rgba(15,23,42,0.7);backdrop-filter:blur(10px);transition:0.3s;
-}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 8%;z-index:1000;background:rgba(15,23,42,0.7);backdrop-filter:blur(10px);transition:0.3s;}
+body.light nav{background:rgba(255,255,255,0.7);}
 .logo{font-size:20px;font-weight:bold;color:#a855f7;}
+body.light .logo{color:#7c3aed;}
 .nav-links{display:flex;gap:25px;}
-.nav-links a{text-decoration:none;color:white;transition:0.3s;}
+.nav-links a{text-decoration:none;color:white;}
+body.light .nav-links a{color:#1e293b;}
 .nav-links a.active{color:#a855f7;}
+body.light .nav-links a.active{color:#7c3aed;}
 .nav-links a:hover{color:#a855f7;}
+body.light .nav-links a:hover{color:#7c3aed;}
 .hamburger{display:none;font-size:24px;cursor:pointer;}
 .mobile-menu{position:fixed;top:0;right:-100%;width:70%;height:100%;background:#1e293b;display:flex;flex-direction:column;padding:40px;gap:25px;transition:0.4s;z-index:999;}
-.mobile-menu a{color:white;text-decoration:none;font-size:18px;}
+body.light .mobile-menu{background:#f5f5f5;}
+.mobile-menu a{color:white;font-size:18px;}
+body.light .mobile-menu a{color:#1e293b;}
 .mobile-menu.active{right:0;}
 
 /* HERO */
 .hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;}
-.hero::before{
-content:"";position:absolute;top:0;left:0;width:100%;height:100%;
-background:linear-gradient(270deg,#7c3aed,#1e3a8a,#7c3aed);
-background-size:600% 600%;opacity:0.6;
-animation:gradientBG 15s ease infinite;
-z-index:0;
-}
+.hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(270deg,#7c3aed,#1e3a8a,#7c3aed);background-size:600% 600%;opacity:0.6;animation:gradientBG 15s ease infinite;z-index:0;}
 @keyframes gradientBG{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
 .hero-content{position:relative;z-index:1;}
 .hero h1{font-size:45px;margin-bottom:20px;}
 .typing{color:#a855f7;border-right:3px solid #a855f7;white-space:nowrap;overflow:hidden;animation:blink 0.7s infinite;}
 @keyframes blink{50%{border-color:transparent;}}
 .hero p{max-width:600px;margin-bottom:25px;}
-.btn{background:#a855f7;padding:14px 30px;border-radius:30px;color:white;text-decoration:none;transition:0.3s;display:inline-block;}
+.btn{background:#a855f7;padding:14px 30px;border-radius:30px;color:white;display:inline-block;transition:0.3s;}
 .btn:hover{background:#7e22ce;transform:scale(1.05);}
+body.light .btn{background:#7c3aed;color:white;}
+body.light .btn:hover{background:#5b21b6;}
 
 /* SECTIONS */
-.section{padding:100px 8%;text-align:center;position:relative;}
-
-/* Unique Backgrounds */
+.section{padding:100px 8%;text-align:center;position:relative;transition:0.5s;}
 #about{background:linear-gradient(rgba(30,41,59,0.8), rgba(30,41,59,0.8)),url('https://images.unsplash.com/photo-1581090700227-0f0e047eecf6?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;}
+body.light #about{background:linear-gradient(rgba(245,245,245,0.8), rgba(245,245,245,0.8)),url('https://images.unsplash.com/photo-1581090700227-0f0e047eecf6?auto=format&fit=crop&w=1600&q=80');}
 #services{background:linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),url('https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;}
+body.light #services{background:linear-gradient(rgba(245,245,245,0.85), rgba(245,245,245,0.85)),url('https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=1600&q=80');}
 #pricing{background:linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),url('https://images.unsplash.com/photo-1612831455546-7c2c67e9a3b6?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;}
+body.light #pricing{background:linear-gradient(rgba(245,245,245,0.85), rgba(245,245,245,0.85)),url('https://images.unsplash.com/photo-1612831455546-7c2c67e9a3b6?auto=format&fit=crop&w=1600&q=80');}
 #contact{background:linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;}
+body.light #contact{background:linear-gradient(rgba(245,245,245,0.85), rgba(245,245,245,0.85)),url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80');}
 
 /* Cards */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px;}
@@ -61,37 +66,45 @@ z-index:0;
 .card i{margin-bottom:15px;color:#a855f7;}
 .card.show{opacity:1;transform:translateY(0);}
 .card:hover{transform:translateY(-10px);}
+body.light .card{background:rgba(255,255,255,0.3);color:#1e293b;}
 
-/* TESTIMONIALS */
-.testimonial-container{display:grid;grid-template-columns:1fr;gap:25px;margin-top:40px;overflow:hidden;}
-.testimonial{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);padding:25px;border-radius:20px;opacity:0;transform:translateY(50px);transition:0.5s;}
+/* Testimonials Slider */
+.testimonial-container{display:flex;overflow:hidden;position:relative;margin-top:40px;}
+.testimonial{min-width:100%;padding:25px;background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border-radius:20px;text-align:center;transition:transform 0.5s;opacity:0;}
+.testimonial.active{opacity:1;}
 
-/* ABOUT TEXT */
-.about p{max-width:700px;margin:auto;margin-top:20px;line-height:1.6;}
+/* Pricing Toggle */
+.toggle-container{display:flex;justify-content:center;margin-bottom:25px;gap:15px;}
+.toggle-btn{padding:10px 20px;background:#a855f7;color:white;border-radius:25px;cursor:pointer;transition:0.3s;}
+.toggle-btn.active{background:#7e22ce;}
+body.light .toggle-btn{background:#7c3aed;color:white;}
+body.light .toggle-btn.active{background:#5b21b6;}
 
-/* FOOTER */
-footer{text-align:center;padding:30px;background:#0f172a;}
-
-/* FLOATING WHATSAPP */
+/* Footer & CTA */
+footer{text-align:center;padding:30px;background:#0f172a;transition:0.5s;}
+body.light footer{background:#e5e7eb;color:#1e293b;}
 .whatsapp{position:fixed;bottom:20px;left:20px;background:#25D366;color:white;padding:15px;border-radius:50%;font-size:20px;box-shadow:0 5px 20px rgba(0,0,0,0.3);}
+.sticky-cta{position:fixed;bottom:20px;right:20px;background:#a855f7;color:white;padding:15px 18px;border-radius:50px;font-size:14px;box-shadow:0 5px 20px rgba(0,0,0,0.3);transition:0.3s;}
+body.light .sticky-cta{background:#7c3aed;color:white;}
 
-/* STICKY CTA */
-.sticky-cta{position:fixed;bottom:20px;right:20px;background:#a855f7;color:white;padding:15px 18px;border-radius:50px;text-decoration:none;font-size:14px;box-shadow:0 5px 20px rgba(0,0,0,0.3);}
+/* Light/Dark Toggle */
+.mode-switch{position:fixed;top:20px;right:20px;padding:10px 15px;background:#a855f7;color:white;border-radius:25px;cursor:pointer;transition:0.3s;}
+body.light .mode-switch{background:#7c3aed;color:white;}
 
-/* RESPONSIVE */
+/* Responsive */
 @media(max-width:768px){
 .nav-links{display:none;}
 .hamburger{display:block;}
 .hero h1{font-size:28px;}
 .hero p{font-size:14px;}
 .cards{grid-template-columns:1fr;}
-.testimonial-container{grid-template-columns:1fr;}
+.testimonial-container{flex-direction:column;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- Navbar -->
 <nav>
 <div class="logo">Py Epublishing Solutions</div>
 <div class="nav-links">
@@ -103,7 +116,6 @@ footer{text-align:center;padding:30px;background:#0f172a;}
 </div>
 <div class="hamburger" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
 </nav>
-
 <div class="mobile-menu" id="mobileMenu">
 <a href="#home" onclick="closeMenu()">Home</a>
 <a href="#services" onclick="closeMenu()">Services</a>
@@ -112,7 +124,10 @@ footer{text-align:center;padding:30px;background:#0f172a;}
 <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
-<!-- HERO -->
+<!-- Light/Dark Mode -->
+<div class="mode-switch" onclick="toggleMode()">🌙 Mode</div>
+
+<!-- Hero -->
 <section class="hero" id="home">
 <div class="hero-content">
 <h1>We Create <span class="typing" id="typing"></span></h1>
@@ -121,7 +136,7 @@ footer{text-align:center;padding:30px;background:#0f172a;}
 </div>
 </section>
 
-<!-- SERVICES -->
+<!-- Services -->
 <section class="section" id="services">
 <h2>Our Services</h2>
 <div class="cards">
@@ -131,45 +146,47 @@ footer{text-align:center;padding:30px;background:#0f172a;}
 </div>
 </section>
 
-<!-- ABOUT -->
+<!-- About -->
 <section class="section" id="about">
 <h2>About Us</h2>
 <p>Py Epublishing Solutions delivers high-quality digital publishing services worldwide with accuracy, speed, and global compatibility.</p>
 </section>
 
-<!-- PRICING -->
+<!-- Pricing -->
 <section class="section" id="pricing">
 <h2>Pricing</h2>
-<div class="cards">
-<div class="card"><h3>Basic ePub</h3><p>₹20 / Page</p></div>
-<div class="card"><h3>Advanced ePub</h3><p>₹30 / Page</p></div>
-<div class="card"><h3>XML Conversion</h3><p>₹25 / Page</p></div>
+<div class="toggle-container">
+<div class="toggle-btn active" data-plan="basic" onclick="togglePricing(this)">Basic</div>
+<div class="toggle-btn" data-plan="advanced" onclick="togglePricing(this)">Advanced</div>
+<div class="toggle-btn" data-plan="xml" onclick="togglePricing(this)">XML</div>
+</div>
+<div class="cards" id="pricing-cards">
+<!-- Pricing cards populated by JS -->
 </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- Testimonials -->
 <section class="section" id="testimonials">
 <h2>Client Testimonials</h2>
-<div class="testimonial-container">
-<div class="testimonial">"Great quality ePub conversion, fast and accurate!" – Client A</div>
+<div class="testimonial-container" id="testimonial-container">
+<div class="testimonial active">"Great quality ePub conversion, fast and accurate!" – Client A</div>
 <div class="testimonial">"The XML workflow service saved our team weeks of work." – Client B</div>
 <div class="testimonial">"Professional Kindle formatting, highly recommended." – Client C</div>
 </div>
 </section>
 
-<!-- CONTACT -->
+<!-- Contact -->
 <section class="section" id="contact">
 <h2>Contact Us</h2>
-<p>📧 <a href="mailto:Pyepubsolutions@gmail.com" style="color:#a855f7;text-decoration:none;">Pyepubsolutions@gmail.com</a></p>
+<p>📧 <a href="mailto:Pyepubsolutions@gmail.com" style="color:#a855f7;">Pyepubsolutions@gmail.com</a></p>
 </section>
 
 <footer>© 2026 Py Epublishing Solutions</footer>
-
 <a href="https://wa.me/91YOURNUMBER" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 <a href="mailto:Pyepubsolutions@gmail.com" class="sticky-cta">Contact Us</a>
 
 <script>
-// Mobile Menu
+// Mobile menu
 function openMenu(){document.getElementById("mobileMenu").classList.add("active");}
 function closeMenu(){document.getElementById("mobileMenu").classList.remove("active");}
 
@@ -182,29 +199,64 @@ if(!isDeleting && j<=textArray[i].length){current=textArray[i].substring(0,j++);
 if(isDeleting && j>=0){current=textArray[i].substring(0,j--);typing.textContent=current;}
 if(j==textArray[i].length){isDeleting=true;}
 if(isDeleting && j==0){isDeleting=false;i++;}
-if(i==textArray.length){i=0;}
-}setTimeout(type,100);}
+if(i==textArray.length){i=0;}}
+setTimeout(type,100);}
 type();
 
-// Scroll reveal
+// Scroll reveal for cards
 window.addEventListener("scroll",()=>{
 document.querySelectorAll(".card, .testimonial").forEach(el=>{
-if(el.getBoundingClientRect().top < window.innerHeight-100){el.classList.add("show");}
+if(el.getBoundingClientRect().top<window.innerHeight-100){el.classList.add("show");}
 });
 });
 
-// Active nav highlight on scroll
+// Active nav highlight
 const sections=document.querySelectorAll("section");
 const navLinks=document.querySelectorAll(".nav-links a");
 window.addEventListener("scroll",()=>{
-let scrollPos=window.scrollY+100;
+let scrollPos=window.scrollY+150;
 sections.forEach(sec=>{
-if(scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop+sec.offsetHeight){
-navLinks.forEach(link=>link.classList.remove("active"));
+if(scrollPos>=sec.offsetTop && scrollPos<sec.offsetTop+sec.offsetHeight){
+navLinks.forEach(l=>l.classList.remove("active"));
 document.querySelector('.nav-links a[href="#'+sec.id+'"]')?.classList.add("active");
 }
 });
 });
+
+// Testimonial slider
+let testimonialIndex=0;
+const testimonials=document.querySelectorAll(".testimonial");
+function showTestimonial(n){
+testimonials.forEach(t=>t.classList.remove("active"));
+testimonials[n].classList.add("active");
+}
+setInterval(()=>{
+testimonialIndex=(testimonialIndex+1)%testimonials.length;
+showTestimonial(testimonialIndex);
+},5000);
+
+// Pricing toggle
+const pricingData={
+basic:[{title:"Basic ePub",price:"₹20 / Page"}],
+advanced:[{title:"Advanced ePub",price:"₹30 / Page"}],
+xml:[{title:"XML Conversion",price:"₹25 / Page"}]
+};
+function togglePricing(btn){
+document.querySelectorAll(".toggle-btn").forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+const plan=btn.dataset.plan;
+const container=document.getElementById("pricing-cards");
+container.innerHTML="";
+pricingData[plan].forEach(p=>{
+const div=document.createElement("div");
+div.classList.add("card","show");
+div.innerHTML=`<h3>${p.title}</h3><p>${p.price}</p>`;
+container.appendChild(div);
+});
+}
+
+// Light/Dark mode
+function toggleMode(){document.body.classList.toggle("light");}
 </script>
 
 </body>
