@@ -117,9 +117,6 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 /* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
 .card{background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:25px;overflow:hidden;position:relative;opacity:0;transform:translateY(50px);transition:0.5s;text-align:center;}
-.card .card-front,.card .card-back{position:relative;padding:25px;display:flex;flex-direction:column;align-items:center;transition:0.5s;}
-.card .card-back{position:absolute;top:0;left:0;width:100%;height:100%;background:#1e293b;color:white;opacity:0;display:flex;justify-content:center;align-items:center;flex-direction:column;padding:20px;}
-.card:hover .card-back{opacity:1;}
 .card img{width:100%;border-radius:15px;margin-bottom:15px;}
 .card i{margin-bottom:10px;color:#a855f7;transition:0.5s;font-size:30px;}
 .card h3{margin-bottom:10px;font-size:22px;}
@@ -192,52 +189,28 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;letter-s
 <h2>Our Services</h2>
 <div class="cards">
 <div class="card">
-  <div class="card-front">
     <img src="https://via.placeholder.com/400x200.png?text=Logo+Design" alt="Logo Design">
     <i class="fa-solid fa-image"></i>
     <h3>Logo Design</h3>
     <p>Custom logos for your brand identity.</p>
-  </div>
-  <div class="card-back">
-    <img src="https://via.placeholder.com/350x150.png?text=Logo+Banner" alt="Logo Banner">
-    <p>Hover to see sample logos and premium concepts.</p>
-  </div>
 </div>
 <div class="card">
-  <div class="card-front">
     <img src="https://via.placeholder.com/400x200.png?text=Thumbnail+Design" alt="Thumbnail">
     <i class="fa-solid fa-camera"></i>
     <h3>YouTube Thumbnail</h3>
     <p>Eye-catching thumbnails to grow your channel.</p>
-  </div>
-  <div class="card-back">
-    <img src="https://via.placeholder.com/350x150.png?text=Thumbnail+Sample" alt="Thumbnail Sample">
-    <p>Hover to preview custom thumbnail designs.</p>
-  </div>
 </div>
 <div class="card">
-  <div class="card-front">
     <img src="https://via.placeholder.com/400x200.png?text=Poster+Banner" alt="Poster Banner">
     <i class="fa-solid fa-image-portrait"></i>
     <h3>Poster / Banner</h3>
     <p>Premium posters and banners for marketing campaigns.</p>
-  </div>
-  <div class="card-back">
-    <img src="https://via.placeholder.com/350x150.png?text=Poster+Sample" alt="Poster Sample">
-    <p>Hover to see poster/banner samples.</p>
-  </div>
 </div>
 <div class="card">
-  <div class="card-front">
     <img src="https://via.placeholder.com/400x200.png?text=Word+to+PDF" alt="Word to PDF">
     <i class="fa-solid fa-file-pdf"></i>
     <h3>Word to PDF / ePub</h3>
     <p>Convert Word documents to professional PDF or ePub files.</p>
-  </div>
-  <div class="card-back">
-    <img src="https://via.placeholder.com/350x150.png?text=PDF+Sample" alt="PDF Sample">
-    <p>Hover to preview formatted PDF/ePub output.</p>
-  </div>
 </div>
 </div>
 </section>
