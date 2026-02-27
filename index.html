@@ -13,14 +13,56 @@ a{transition:0.3s;text-decoration:none;}
 a:hover{text-decoration:none;}
 
 /* NAVBAR */
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 8%;z-index:1000;background:rgba(15,23,42,0.7);backdrop-filter:blur(10px);}
-.nav-title{font-size:22px;font-weight:bold;color:#a855f7;}
-.nav-links{display:flex;gap:25px;}
-.nav-links a{color:white;font-weight:500;}
-.nav-links a.active{color:#a855f7;}
-.nav-links a:hover{color:#a855f7;}
-.hamburger{display:none;font-size:24px;cursor:pointer;}
-.mobile-menu{position:fixed;top:0;right:-100%;width:70%;height:100%;background:#1e293b;display:flex;flex-direction:column;padding:40px;gap:25px;transition:0.4s;z-index:999;}
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between; /* Company left, links right */
+  align-items:center;
+  padding:15px 8%;
+  z-index:1000;
+  background:rgba(15,23,42,0.7);
+  backdrop-filter:blur(10px);
+}
+.nav-title{
+  font-size:22px;
+  font-weight:bold;
+  color:#a855f7;
+}
+.nav-links{
+  display:flex;
+  gap:25px;
+}
+.nav-links a{
+  color:white;
+  font-weight:500;
+}
+.nav-links a.active{
+  color:#a855f7;
+}
+.nav-links a:hover{
+  color:#a855f7;
+}
+.hamburger{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+.mobile-menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:70%;
+  height:100%;
+  background:#1e293b;
+  display:flex;
+  flex-direction:column;
+  padding:40px;
+  gap:25px;
+  transition:0.4s;
+  z-index:999;
+}
 .mobile-menu a{color:white;font-size:18px;}
 .mobile-menu.active{right:0;}
 
@@ -99,6 +141,7 @@ footer{text-align:center;padding:30px;background:#0f172a;}
   </div>
   <div class="hamburger" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
 </nav>
+
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home" onclick="closeMenu()">Home</a>
   <a href="#services" onclick="closeMenu()">Services</a>
@@ -116,104 +159,129 @@ footer{text-align:center;padding:30px;background:#0f172a;}
   <a href="mailto:Pyepubsolutions@gmail.com" class="btn pulse">Get Free Quote</a>
 </div>
 </section>
-<!-- SERVICES -->
+  <!-- SERVICES -->
 <section class="section" id="services">
-<h2>Our Services</h2>
-<div class="cards">
-<div class="card"><i class="fa-solid fa-book fa-2x"></i><h3>ePub Conversion</h3><p>Professional ePub 2 & 3 files.</p></div>
-<div class="card"><i class="fa-solid fa-code fa-2x"></i><h3>XML Workflow</h3><p>Structured XML for journals & books.</p></div>
-<div class="card"><i class="fa-brands fa-amazon fa-2x"></i><h3>Kindle Formatting</h3><p>Amazon KDP ready support.</p></div>
-</div>
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <i class="fa-solid fa-book fa-2x"></i>
+      <h3>ePub Conversion</h3>
+      <p>Professional ePub 2 & 3 files.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-code fa-2x"></i>
+      <h3>XML Workflow</h3>
+      <p>Structured XML for journals & books.</p>
+    </div>
+    <div class="card">
+      <i class="fa-brands fa-amazon fa-2x"></i>
+      <h3>Kindle Formatting</h3>
+      <p>Amazon KDP ready support.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section class="section" id="about">
-<h2>About Us</h2>
-<p>Py Epublishing Solutions delivers high-quality digital publishing services worldwide with accuracy, speed, and global compatibility.</p>
+  <h2>About Us</h2>
+  <p>Py Epublishing Solutions delivers high-quality digital publishing services worldwide with accuracy, speed, and global compatibility.</p>
 </section>
 
 <!-- PRICING -->
 <section class="section" id="pricing">
-<h2>Pricing</h2>
-<div class="pricing-cards">
-<div class="pricing-card">
-<div class="pricing-inner">
-<div class="pricing-front">
-<h3>Basic ePub</h3>
-<p>₹20 / Page</p>
-<ul>
-<li>Standard ePub formatting</li>
-<li>Compatible with all devices</li>
-<li>Email support</li>
-</ul>
-</div>
-<div class="pricing-back">
-<i class="fa-solid fa-book-open fa-3x"></i>
-<p>Perfect for standard eBooks & journals.</p>
-<a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
-</div>
-</div>
-</div>
+  <h2>Pricing</h2>
+  <div class="pricing-cards">
+    <div class="pricing-card">
+      <div class="pricing-inner">
+        <div class="pricing-front">
+          <h3>Basic ePub</h3>
+          <p>₹20 / Page</p>
+          <ul>
+            <li>Standard ePub formatting</li>
+            <li>Compatible with all devices</li>
+            <li>Email support</li>
+          </ul>
+        </div>
+        <div class="pricing-back">
+          <i class="fa-solid fa-book-open fa-3x"></i>
+          <p>Perfect for standard eBooks & journals.</p>
+          <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
+        </div>
+      </div>
+    </div>
 
-<div class="pricing-card">
-<div class="pricing-inner">
-<div class="pricing-front">
-<h3>Advanced ePub</h3>
-<p>₹30 / Page</p>
-<ul>
-<li>Interactive ePub features</li>
-<li>Enhanced graphics & images</li>
-<li>Email + Call support</li>
-</ul>
-</div>
-<div class="pricing-back">
-<i class="fa-solid fa-gem fa-3x"></i>
-<p>Best for interactive eBooks & magazines.</p>
-<a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
-</div>
-</div>
-</div>
+    <div class="pricing-card">
+      <div class="pricing-inner">
+        <div class="pricing-front">
+          <h3>Advanced ePub</h3>
+          <p>₹30 / Page</p>
+          <ul>
+            <li>Interactive ePub features</li>
+            <li>Enhanced graphics & images</li>
+            <li>Email + Call support</li>
+          </ul>
+        </div>
+        <div class="pricing-back">
+          <i class="fa-solid fa-gem fa-3x"></i>
+          <p>Best for interactive eBooks & magazines.</p>
+          <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
+        </div>
+      </div>
+    </div>
 
-<div class="pricing-card">
-<div class="pricing-inner">
-<div class="pricing-front">
-<h3>XML Conversion</h3>
-<p>₹25 / Page</p>
-<ul>
-<li>Journals & Books XML tagging</li>
-<li>Validation-ready files</li>
-<li>Support included</li>
-</ul>
-</div>
-<div class="pricing-back">
-<i class="fa-solid fa-file-code fa-3x"></i>
-<p>Structured XML for journals & books.</p>
-<a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
-</div>
-</div>
-</div>
-</div>
+    <div class="pricing-card">
+      <div class="pricing-inner">
+        <div class="pricing-front">
+          <h3>XML Conversion</h3>
+          <p>₹25 / Page</p>
+          <ul>
+            <li>Journals & Books XML tagging</li>
+            <li>Validation-ready files</li>
+            <li>Support included</li>
+          </ul>
+        </div>
+        <div class="pricing-back">
+          <i class="fa-solid fa-file-code fa-3x"></i>
+          <p>Structured XML for journals & books.</p>
+          <a href="mailto:Pyepubsolutions@gmail.com" class="btn">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section class="section testimonial-section">
-<h2>Testimonials</h2>
-<div class="testimonial-container">
-<div class="testimonial active"><p>"Py Epublishing transformed our manuscripts into interactive ePub seamlessly!"</p><h4>- John Doe</h4></div>
-<div class="testimonial"><p>"Amazing XML tagging for our journals with perfect validation."</p><h4>- Sarah Lee</h4></div>
-<div class="testimonial"><p>"Kindle formatting done professionally and quickly."</p><h4>- Mike Smith</h4></div>
-</div>
+  <h2>Testimonials</h2>
+  <div class="testimonial-container">
+    <div class="testimonial active">
+      <p>"Py Epublishing transformed our manuscripts into interactive ePub seamlessly!"</p>
+      <h4>- John Doe</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Amazing XML tagging for our journals with perfect validation."</p>
+      <h4>- Sarah Lee</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Kindle formatting done professionally and quickly."</p>
+      <h4>- Mike Smith</h4>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section class="section" id="contact">
-<h2>Contact Us</h2>
-<p>📧 <a href="mailto:Pyepubsolutions@gmail.com" style="color:#a855f7;">Pyepubsolutions@gmail.com</a></p>
+  <h2>Contact Us</h2>
+  <p>📧 <a href="mailto:Pyepubsolutions@gmail.com" style="color:#a855f7;">Pyepubsolutions@gmail.com</a></p>
 </section>
 
+<!-- FOOTER -->
 <footer>© 2026 Py Epublishing Solutions</footer>
+
+<!-- WHATSAPP CTA -->
 <a href="https://wa.me/91YOURNUMBER" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
+<!-- SCRIPTS -->
 <script>
 // MOBILE MENU
 function openMenu(){document.getElementById("mobileMenu").classList.add("active");}
@@ -299,3 +367,5 @@ window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.heig
 </script>
 </body>
 </html>
+
+<!-- Continue Services, About, Pricing, Testimonials, Contact sections as previous code -->
