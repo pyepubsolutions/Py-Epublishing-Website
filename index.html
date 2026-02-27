@@ -6,16 +6,16 @@
 <title>Py Epublishing Solutions</title>
 <meta name="description" content="Professional ePub, XML, Logo, Thumbnail, Poster, Word-to-PDF services worldwide">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <style>
+/* GLOBAL */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
-body{background:#0f172a;color:white;overflow-x:hidden;transition:0.5s;line-height:1.7;}
+body{background:#1e293b;color:white;overflow-x:hidden;line-height:1.7;} /* Plain dark wallpaper */
 a{transition:0.3s;text-decoration:none;}
 a:hover{text-decoration:none;}
 
 /* NAVBAR */
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 8%;z-index:1000;background:rgba(15,23,42,0.95);backdrop-filter:blur(10px);box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 8%;z-index:1000;background:rgba(30,41,59,0.95);backdrop-filter:blur(10px);box-shadow:0 5px 15px rgba(0,0,0,0.3);}
 .nav-logo{font-size:36px;font-weight:900;background:linear-gradient(90deg,#a855f7,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;}
 .nav-links{display:flex;gap:25px;}
 .nav-links a{color:white;font-weight:500;padding:5px 10px;border-radius:8px;}
@@ -26,8 +26,8 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 .mobile-menu.active{right:0;}
 
 /* HERO */
-.hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:0 20px;background:linear-gradient(135deg,#0f172a,#1e293b);}
-.hero-content{z-index:1;max-width:800px;margin:0 auto;animation:fadeIn 1.5s ease forwards;}
+.hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;position:relative;padding:0 20px;}
+.hero-content{z-index:1;max-width:800px;margin:0 auto;}
 .hero h1{font-size:52px;font-weight:900;background:linear-gradient(90deg,#a855f7,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px;}
 .hero-subtitle{font-size:20px;color:#e0e0e0;margin-bottom:35px;}
 .hero-buttons{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
@@ -44,7 +44,7 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 
 /* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
-.card{background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:25px;padding:20px;text-align:center;opacity:1;transform:translateY(0);transition:0.5s, transform 0.3s ease;box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.card{background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:25px;padding:20px;text-align:center;transition:0.5s;}
 .card img{width:100%;border-radius:15px;margin-bottom:15px;transition:0.3s;}
 .card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 20px 40px rgba(168,85,247,0.5);}
 .card h3{font-size:22px;margin-bottom:10px;}
@@ -61,7 +61,7 @@ nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;a
 .pricing-card ul li::before{content:'✔';position:absolute;left:0;color:#a855f7;font-weight:bold;}
 
 /* FOOTER */
-footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;}
+footer{text-align:center;padding:40px;background:#1e293b;font-size:16px;}
 
 /* RESPONSIVE */
 @media(max-width:768px){
@@ -115,22 +115,22 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;}
   <div class="card">
     <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg" alt="Logo Design">
     <h3>Logo Design</h3>
-    <p>We design unique, professional logos to create a strong brand identity. Each logo is tailored to reflect your business values and audience.</p>
+    <p>Create unique and professional logos to strengthen your brand identity.</p>
   </div>
   <div class="card">
     <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg" alt="YouTube Thumbnail">
     <h3>YouTube Thumbnail</h3>
-    <p>Our eye-catching thumbnails are designed to maximize clicks and engagement on YouTube videos, increasing views and audience retention.</p>
+    <p>Design eye-catching thumbnails to increase clicks and engagement.</p>
   </div>
   <div class="card">
-    <img src="https://images.pexels.com/photos/1670975/pexels-photo-1670975.jpeg" alt="Poster Design">
+    <img src="https://images.pexels.com/photos/1670975/pexels-photo-1670975.jpeg" alt="Poster Banner">
     <h3>Poster / Banner</h3>
-    <p>Professional posters and banners for print or digital campaigns. We focus on creative design that communicates your message effectively.</p>
+    <p>Professional posters and banners for print and digital marketing campaigns.</p>
   </div>
   <div class="card">
-    <img src="https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg" alt="Document Services">
+    <img src="https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg" alt="Word to PDF">
     <h3>Word to PDF / ePub</h3>
-    <p>Convert Word documents to well-formatted PDF or ePub files suitable for digital publishing, e-books, or professional distribution.</p>
+    <p>Convert Word documents to high-quality PDF or ePub formats for publishing.</p>
   </div>
 </div>
 </section>
@@ -141,39 +141,19 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;}
 <div class="pricing-cards">
   <div class="pricing-card">
     <h3>Logo Design</h3><p class="price">₹500 / Logo</p>
-    <ul>
-      <li>Custom vector logo</li>
-      <li>3 design concepts</li>
-      <li>Unlimited revisions</li>
-      <li>Delivery in 2-3 days</li>
-    </ul>
+    <ul><li>Custom vector logo</li><li>3 concepts</li><li>Unlimited revisions</li><li>Delivery in 2-3 days</li></ul>
   </div>
   <div class="pricing-card">
     <h3>YouTube Thumbnail</h3><p class="price">₹150 / Thumbnail</p>
-    <ul>
-      <li>HD design</li>
-      <li>Engaging and clickable</li>
-      <li>2 revisions</li>
-      <li>Delivery in 24 hours</li>
-    </ul>
+    <ul><li>HD design</li><li>Clickable & engaging</li><li>2 revisions</li><li>Delivery in 24 hours</li></ul>
   </div>
   <div class="pricing-card">
     <h3>Poster / Banner</h3><p class="price">₹400 / Poster</p>
-    <ul>
-      <li>Custom graphics</li>
-      <li>Print & digital ready</li>
-      <li>High resolution</li>
-      <li>Fast turnaround</li>
-    </ul>
+    <ul><li>Custom graphics</li><li>Print & digital ready</li><li>High resolution</li><li>Fast turnaround</li></ul>
   </div>
   <div class="pricing-card">
     <h3>Word to PDF / ePub</h3><p class="price">₹20 / Page</p>
-    <ul>
-      <li>Professional formatting</li>
-      <li>Universal device compatibility</li>
-      <li>Editable support</li>
-      <li>Quick delivery</li>
-    </ul>
+    <ul><li>Professional formatting</li><li>Universal compatibility</li><li>Editable support</li><li>Quick delivery</li></ul>
   </div>
 </div>
 </section>
@@ -181,20 +161,19 @@ footer{text-align:center;padding:40px;background:#0f172a;font-size:16px;}
 <!-- ABOUT -->
 <section class="section" id="about">
 <h2>About Us</h2>
-<p><strong>Py Epublishing Solutions</strong> is a global digital services company specializing in creative design and publishing solutions. Our goal is to help individuals, businesses, and creators present their content professionally and effectively.</p>
-<p>Our team of skilled designers and publishing experts work with cutting-edge tools to deliver logos, thumbnails, posters, banners, PDFs, and ePub files that meet international quality standards.</p>
-<p>We focus on creativity, attention to detail, and client satisfaction. Whether you are launching a brand, publishing e-books, or creating marketing material, we provide personalized services to meet your exact needs.</p>
-<p>Our mission is to combine innovation with professionalism, ensuring every project we deliver is visually appealing, functional, and high-quality. We are committed to excellence in every step of the creative and publishing process.</p>
-<p>At Py Epublishing Solutions, your vision becomes reality through professional design, timely delivery, and dedicated customer support.</p>
+<p><strong>Py Epublishing Solutions</strong> provides high-quality creative and digital publishing services. We help businesses, brands, and creators present their content professionally.</p>
+<p>We specialize in logos, thumbnails, posters, banners, PDFs, and ePub files using advanced tools and skilled designers.</p>
+<p>Our mission is to combine creativity and technology to deliver visually stunning and effective digital content.</p>
+<p>We believe in timely delivery, quality output, and excellent customer support for every project.</p>
 </section>
 
 <!-- CONTACT -->
 <section class="section" id="contact">
 <h2>Contact Us</h2>
-<p>We are here to answer your questions and provide quotes for your projects. Reach out to us anytime via email or WhatsApp.</p>
+<p>Reach us via email or WhatsApp for any inquiries or quotes for your projects.</p>
 <p>📧 Email: <a href="mailto:Pyepubsolutions@gmail.com" style="color:#a855f7;">Pyepubsolutions@gmail.com</a></p>
 <p>📱 WhatsApp: <a href="https://wa.me/919385315022" style="color:#a855f7;">+91 93853 15022</a></p>
-<p>We respond promptly and look forward to helping you create exceptional digital content.</p>
+<p>We respond promptly and are ready to assist with your design and publishing needs.</p>
 </section>
 
 <footer>© 2026 Py Epublishing Solutions. All rights reserved.</footer>
