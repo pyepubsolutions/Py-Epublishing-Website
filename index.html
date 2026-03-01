@@ -5,37 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Py Epublishing Solutions</title>
 <meta name="description" content="Scalable EPUB & XML Production Partner for Global Publishers">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#f4f6f9;color:#222;line-height:1.6}
-header{background:#0d1b2a;color:#fff;padding:20px 8%}
-header h1{font-size:28px;font-weight:700}
-nav{margin-top:10px}
-nav a{color:#fff;margin-right:20px;text-decoration:none;font-size:14px}
-.hero{background:#1b263b;color:#fff;padding:100px 8%;text-align:center}
-.hero h2{font-size:42px;margin-bottom:20px}
-.hero p{max-width:700px;margin:auto;margin-bottom:30px}
-.btn{background:#00b4d8;color:#fff;padding:12px 25px;text-decoration:none;border-radius:5px;display:inline-block}
-section{padding:70px 8%}
-.section-title{text-align:center;margin-bottom:40px;font-size:30px;font-weight:600}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
-.card{background:#fff;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.08)}
-.card h3{margin-bottom:15px;color:#0d1b2a}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+html{scroll-behavior:smooth}
+body{background:#f8fafc;color:#1a1a1a;line-height:1.7}
+header{background:#0f172a;color:#fff;padding:20px 8%;position:sticky;top:0;z-index:1000}
+header h1{font-size:26px;font-weight:700}
+nav{margin-top:8px}
+nav a{color:#cbd5e1;margin-right:20px;text-decoration:none;font-size:14px;font-weight:500}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;padding:120px 8%;text-align:center}
+.hero h2{font-size:44px;margin-bottom:20px;font-weight:700}
+.hero p{max-width:750px;margin:auto;margin-bottom:35px;color:#cbd5e1}
+.btn{background:#2563eb;color:#fff;padding:14px 30px;text-decoration:none;border-radius:6px;font-weight:600;transition:0.3s}
+.btn:hover{background:#1d4ed8}
+section{padding:90px 8%}
+.section-title{text-align:center;margin-bottom:50px;font-size:32px;font-weight:700}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.card{background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.05);transition:0.3s}
+.card:hover{transform:translateY(-6px)}
+.card h3{margin-bottom:15px;color:#0f172a}
 .card ul{list-style:none}
-.card ul li{margin-bottom:8px}
-.why{background:#e9ecef}
-.why ul{max-width:800px;margin:auto;list-style:none}
-.why ul li{margin-bottom:12px;font-size:16px}
-.portfolio{text-align:center}
-.portfolio img{width:100%;max-width:300px;margin:10px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+.card ul li{margin-bottom:10px;color:#475569}
+.why{background:#f1f5f9}
+.why ul{max-width:800px;margin:auto;list-style:none;text-align:center}
+.why ul li{margin-bottom:15px;font-size:17px}
+.logos{text-align:center}
+.logos img{max-width:140px;margin:20px;opacity:0.7;transition:0.3s}
+.logos img:hover{opacity:1}
+.testimonials{background:#f1f5f9;text-align:center}
+.testimonial-box{max-width:700px;margin:20px auto;background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.05)}
 .contact{text-align:center}
-.contact form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px}
-.contact input,.contact textarea{padding:12px;border:1px solid #ccc;border-radius:5px}
-footer{background:#0d1b2a;color:#fff;text-align:center;padding:20px;margin-top:40px}
-@media(max-width:768px){
-.hero h2{font-size:28px}
-}
+.contact form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:18px}
+.contact input,.contact textarea{padding:14px;border:1px solid #cbd5e1;border-radius:6px;font-size:14px}
+footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:25px;margin-top:40px}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,0.2)}
+@media(max-width:768px){.hero h2{font-size:30px}}
 </style>
 </head>
 <body>
@@ -44,85 +50,129 @@ footer{background:#0d1b2a;color:#fff;text-align:center;padding:20px;margin-top:4
 <h1>Py Epublishing Solutions</h1>
 <nav>
 <a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
 <a href="#why">Why Us</a>
-<a href="#portfolio">Portfolio</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
-<h2>Scalable EPUB & XML Production Partner for Global Publishers</h2>
-<p>We deliver high-quality digital publishing workflows with fast turnaround and competitive pricing. Offshore production support from Chennai, India.</p>
-<a href="#contact" class="btn">Request Sample Conversion</a>
+<h2>Premium Offshore EPUB & XML Production Partner</h2>
+<p>Trusted by global publishers for scalable, accurate, and cost-effective digital publishing workflows. Based in Chennai, India — serving worldwide clients.</p>
+<a href="#contact" class="btn">Get a Free Quote</a>
 </section>
 
 <section id="services">
-<h2 class="section-title">Our Services</h2>
+<h2 class="section-title">Our Expertise</h2>
 <div class="services">
 <div class="card">
-<h3>Digital Publishing</h3>
+<h3>EPUB & Digital Publishing</h3>
 <ul>
-<li>EPUB 2 & 3 Conversion</li>
-<li>Kindle Formatting</li>
-<li>Fixed Layout EPUB</li>
+<li>Reflowable & Fixed Layout EPUB</li>
+<li>Kindle KPF Formatting</li>
 <li>Accessibility Compliance</li>
+<li>eBook QA Validation</li>
 </ul>
 </div>
 <div class="card">
-<h3>XML Services</h3>
+<h3>XML Workflow</h3>
 <ul>
-<li>JATS XML</li>
-<li>BITS XML</li>
-<li>Custom DTD Tagging</li>
-<li>Journal Article Processing</li>
+<li>JATS / BITS XML</li>
+<li>Custom DTD Conversion</li>
+<li>Scholarly Journal Processing</li>
+<li>Automated XML Pipelines</li>
 </ul>
 </div>
 <div class="card">
-<h3>Print & Design</h3>
+<h3>Typesetting & Print</h3>
 <ul>
-<li>Print-ready PDF</li>
-<li>Typesetting</li>
-<li>Cover & Banner Design</li>
-<li>Word to PDF Conversion</li>
+<li>Print-Ready PDF</li>
+<li>Book Layout & Composition</li>
+<li>Cover & Marketing Design</li>
+<li>Word to Professional PDF</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="pricing">
+<h2 class="section-title">Flexible Pricing Model</h2>
+<div class="services">
+<div class="card">
+<h3>Standard EPUB</h3>
+<ul>
+<li>Starting from $1 per page</li>
+<li>Bulk Discounts Available</li>
+<li>Fast Turnaround</li>
+</ul>
+</div>
+<div class="card">
+<h3>Journal XML</h3>
+<ul>
+<li>Custom Quote per Article</li>
+<li>High-Volume Processing</li>
+<li>Dedicated Production Team</li>
+</ul>
+</div>
+<div class="card">
+<h3>Enterprise Partnership</h3>
+<ul>
+<li>Monthly Retainer Model</li>
+<li>Overflow Production Support</li>
+<li>Confidential NDA Workflow</li>
 </ul>
 </div>
 </div>
 </section>
 
 <section id="why" class="why">
-<h2 class="section-title">Why Choose Us</h2>
+<h2 class="section-title">Why Global Clients Choose Us</h2>
 <ul>
-<li>✔ Dedicated Production Team</li>
-<li>✔ Quick Turnaround & Scalable Workflow</li>
-<li>✔ Cost-effective Offshore Support</li>
-<li>✔ 100% Quality Assurance</li>
-<li>✔ International Publishing Standards</li>
+<li>✔ Structured Production Workflow</li>
+<li>✔ Multi-Level Quality Assurance</li>
+<li>✔ Cost-Effective Offshore Advantage</li>
+<li>✔ Dedicated Project Managers</li>
+<li>✔ Secure File Handling</li>
 </ul>
 </section>
 
-<section id="portfolio" class="portfolio">
-<h2 class="section-title">Portfolio Samples</h2>
-<p>Before & After Conversion Samples Available Upon Request</p>
-<img src="https://picsum.photos/300/200" alt="Sample 1">
-<img src="https://picsum.photos/301/200" alt="Sample 2">
-<img src="https://picsum.photos/302/200" alt="Sample 3">
+<section class="logos">
+<h2 class="section-title">Trusted Workflow Experience</h2>
+<img src="https://picsum.photos/140/60" alt="Client Logo">
+<img src="https://picsum.photos/141/60" alt="Client Logo">
+<img src="https://picsum.photos/142/60" alt="Client Logo">
+<img src="https://picsum.photos/143/60" alt="Client Logo">
+</section>
+
+<section class="testimonials">
+<h2 class="section-title">Client Feedback</h2>
+<div class="testimonial-box">
+<p>"Professional team with excellent turnaround time. Their EPUB accuracy and XML structuring quality exceeded expectations."</p>
+<strong>– Publishing Manager, UK</strong>
+</div>
+<div class="testimonial-box">
+<p>"Reliable offshore production partner for our journal workflow."</p>
+<strong>– Academic Publisher, USA</strong>
+</div>
 </section>
 
 <section id="contact" class="contact">
-<h2 class="section-title">Contact Us</h2>
+<h2 class="section-title">Let’s Work Together</h2>
 <p>Email: info@pyepublishingsolutions.com</p>
 <p>Location: Chennai, India</p>
 <form>
 <input type="text" placeholder="Your Name" required>
 <input type="email" placeholder="Your Email" required>
-<textarea rows="5" placeholder="Your Message" required></textarea>
-<button type="submit" class="btn">Send Message</button>
+<textarea rows="5" placeholder="Project Details" required></textarea>
+<button type="submit" class="btn">Send Inquiry</button>
 </form>
 </section>
 
 <footer>
 <p>© 2026 Py Epublishing Solutions. All Rights Reserved.</p>
 </footer>
+
+<a href="https://wa.me/919000000000" class="whatsapp">WhatsApp</a>
 
 </body>
 </html>
