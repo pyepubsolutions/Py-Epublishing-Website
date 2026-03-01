@@ -4,194 +4,125 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Py Epublishing Solutions</title>
-<meta name="description" content="Professional ePub, XML, Logo, Thumbnail, Poster, Word-to-PDF services worldwide">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<meta name="description" content="Scalable EPUB & XML Production Partner for Global Publishers">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-/* GLOBAL */
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
-body{background:#1e293b;color:white;overflow-x:hidden;line-height:1.7;} /* Plain dark wallpaper */
-a{transition:0.3s;text-decoration:none;}
-a:hover{text-decoration:none;}
-
-/* NAVBAR */
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 8%;z-index:1000;background:rgba(30,41,59,0.95);backdrop-filter:blur(10px);box-shadow:0 5px 15px rgba(0,0,0,0.3);}
-.nav-logo{font-size:36px;font-weight:900;background:linear-gradient(90deg,#a855f7,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;}
-.nav-links{display:flex;gap:25px;}
-.nav-links a{color:white;font-weight:500;padding:5px 10px;border-radius:8px;}
-.nav-links a:hover{background:rgba(168,85,247,0.15);color:#a855f7;}
-.hamburger{display:none;font-size:24px;cursor:pointer;}
-.mobile-menu{position:fixed;top:0;right:-100%;width:70%;height:100%;background:#1e293b;display:flex;flex-direction:column;padding:60px 30px;gap:25px;transition:0.4s;z-index:999;}
-.mobile-menu a{color:white;font-size:18px;}
-.mobile-menu.active{right:0;}
-
-/* HERO */
-.hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;position:relative;padding:0 20px;}
-.hero-content{z-index:1;max-width:800px;margin:0 auto;}
-.hero h1{font-size:52px;font-weight:900;background:linear-gradient(90deg,#a855f7,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px;}
-.hero-subtitle{font-size:20px;color:#e0e0e0;margin-bottom:35px;}
-.hero-buttons{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
-.btn{transition:all .3s ease;border-radius:50px;font-weight:600;display:inline-block;cursor:pointer;}
-.btn-primary{background:#a855f7;color:white;padding:16px 36px;box-shadow:0 8px 20px rgba(168,85,247,0.4);}
-.btn-primary:hover{transform:scale(1.08);box-shadow:0 10px 30px rgba(168,85,247,0.6);}
-.btn-secondary{background:transparent;border:2px solid #a855f7;color:#a855f7;padding:16px 36px;}
-.btn-secondary:hover{background:#a855f7;color:white;transform:scale(1.05);}
-
-/* SECTIONS */
-.section{padding:120px 8%;}
-.section h2{font-size:36px;margin-bottom:40px;text-align:center;color:#a855f7;}
-.section p{font-size:18px;color:#e0e0e0;text-align:center;line-height:1.8;max-width:900px;margin:0 auto 20px auto;}
-
-/* CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
-.card{background:rgba(255,255,255,0.05);backdrop-filter:blur(15px);border-radius:25px;padding:20px;text-align:center;transition:0.5s;}
-.card img{width:100%;border-radius:15px;margin-bottom:15px;transition:0.3s;}
-.card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 20px 40px rgba(168,85,247,0.5);}
-.card h3{font-size:22px;margin-bottom:10px;}
-.card p{font-size:16px;}
-
-/* PRICING */
-.pricing-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
-.pricing-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);padding:40px;border-radius:25px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,0.2);transition:0.3s;}
-.pricing-card:hover{transform:scale(1.05);box-shadow:0 15px 40px rgba(168,85,247,0.6);}
-.pricing-card h3{font-size:24px;margin-bottom:20px;}
-.pricing-card p.price{font-size:28px;font-weight:bold;color:#a855f7;margin-bottom:15px;}
-.pricing-card ul{list-style:none;padding:0;}
-.pricing-card ul li{margin-bottom:10px;padding-left:25px;position:relative;}
-.pricing-card ul li::before{content:'✔';position:absolute;left:0;color:#a855f7;font-weight:bold;}
-
-/* FOOTER */
-footer{text-align:center;padding:40px;background:#1e293b;font-size:16px;}
-
-/* RESPONSIVE */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f4f6f9;color:#222;line-height:1.6}
+header{background:#0d1b2a;color:#fff;padding:20px 8%}
+header h1{font-size:28px;font-weight:700}
+nav{margin-top:10px}
+nav a{color:#fff;margin-right:20px;text-decoration:none;font-size:14px}
+.hero{background:#1b263b;color:#fff;padding:100px 8%;text-align:center}
+.hero h2{font-size:42px;margin-bottom:20px}
+.hero p{max-width:700px;margin:auto;margin-bottom:30px}
+.btn{background:#00b4d8;color:#fff;padding:12px 25px;text-decoration:none;border-radius:5px;display:inline-block}
+section{padding:70px 8%}
+.section-title{text-align:center;margin-bottom:40px;font-size:30px;font-weight:600}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:#fff;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.08)}
+.card h3{margin-bottom:15px;color:#0d1b2a}
+.card ul{list-style:none}
+.card ul li{margin-bottom:8px}
+.why{background:#e9ecef}
+.why ul{max-width:800px;margin:auto;list-style:none}
+.why ul li{margin-bottom:12px;font-size:16px}
+.portfolio{text-align:center}
+.portfolio img{width:100%;max-width:300px;margin:10px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
+.contact{text-align:center}
+.contact form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px}
+.contact input,.contact textarea{padding:12px;border:1px solid #ccc;border-radius:5px}
+footer{background:#0d1b2a;color:#fff;text-align:center;padding:20px;margin-top:40px}
 @media(max-width:768px){
-.nav-links{display:none;}
-.hamburger{display:block;}
-.cards{grid-template-columns:1fr;}
-.pricing-cards{grid-template-columns:1fr;}
-.hero h1{font-size:36px;}
-.hero-subtitle{font-size:18px;}
+.hero h2{font-size:28px}
 }
 </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
+<header>
+<h1>Py Epublishing Solutions</h1>
 <nav>
-  <div class="nav-logo">Py Epublishing Solutions</div>
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <div class="hamburger" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
+<a href="#services">Services</a>
+<a href="#why">Why Us</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#home" onclick="closeMenu()">Home</a>
-  <a href="#services" onclick="closeMenu()">Services</a>
-  <a href="#pricing" onclick="closeMenu()">Pricing</a>
-  <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
-</div>
+</header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-<div class="hero-content">
-  <h1>We Create <span class="typing" id="typing"></span></h1>
-  <p class="hero-subtitle">High-quality ePub, XML, Logo, Poster & Thumbnail services worldwide.</p>
-  <div class="hero-buttons">
-    <a href="https://wa.me/919385315022" class="btn btn-primary">Get Free Quote</a>
-    <a href="#services" class="btn btn-secondary">Our Services</a>
-  </div>
-</div>
+<section class="hero">
+<h2>Scalable EPUB & XML Production Partner for Global Publishers</h2>
+<p>We deliver high-quality digital publishing workflows with fast turnaround and competitive pricing. Offshore production support from Chennai, India.</p>
+<a href="#contact" class="btn">Request Sample Conversion</a>
 </section>
 
-<!-- SERVICES -->
-<section class="section" id="services">
-<h2>Our Services</h2>
-<div class="cards">
-  <div class="card">
-    <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg" alt="Logo Design">
-    <h3>Logo Design</h3>
-    <p>Create unique and professional logos to strengthen your brand identity.</p>
-  </div>
-  <div class="card">
-    <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg" alt="YouTube Thumbnail">
-    <h3>YouTube Thumbnail</h3>
-    <p>Design eye-catching thumbnails to increase clicks and engagement.</p>
-  </div>
-  <div class="card">
-    <img src="https://images.pexels.com/photos/1670975/pexels-photo-1670975.jpeg" alt="Poster Banner">
-    <h3>Poster / Banner</h3>
-    <p>Professional posters and banners for print and digital marketing campaigns.</p>
-  </div>
-  <div class="card">
-    <img src="https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg" alt="Word to PDF">
-    <h3>Word to PDF / ePub</h3>
-    <p>Convert Word documents to high-quality PDF or ePub formats for publishing.</p>
-  </div>
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+<div class="services">
+<div class="card">
+<h3>Digital Publishing</h3>
+<ul>
+<li>EPUB 2 & 3 Conversion</li>
+<li>Kindle Formatting</li>
+<li>Fixed Layout EPUB</li>
+<li>Accessibility Compliance</li>
+</ul>
+</div>
+<div class="card">
+<h3>XML Services</h3>
+<ul>
+<li>JATS XML</li>
+<li>BITS XML</li>
+<li>Custom DTD Tagging</li>
+<li>Journal Article Processing</li>
+</ul>
+</div>
+<div class="card">
+<h3>Print & Design</h3>
+<ul>
+<li>Print-ready PDF</li>
+<li>Typesetting</li>
+<li>Cover & Banner Design</li>
+<li>Word to PDF Conversion</li>
+</ul>
+</div>
 </div>
 </section>
 
-<!-- PRICING -->
-<section class="section" id="pricing">
-<h2>Pricing Plans</h2>
-<div class="pricing-cards">
-  <div class="pricing-card">
-    <h3>Logo Design</h3><p class="price">₹500 / Logo</p>
-    <ul><li>Custom vector logo</li><li>3 concepts</li><li>Unlimited revisions</li><li>Delivery in 2-3 days</li></ul>
-  </div>
-  <div class="pricing-card">
-    <h3>YouTube Thumbnail</h3><p class="price">₹150 / Thumbnail</p>
-    <ul><li>HD design</li><li>Clickable & engaging</li><li>2 revisions</li><li>Delivery in 24 hours</li></ul>
-  </div>
-  <div class="pricing-card">
-    <h3>Poster / Banner</h3><p class="price">₹400 / Poster</p>
-    <ul><li>Custom graphics</li><li>Print & digital ready</li><li>High resolution</li><li>Fast turnaround</li></ul>
-  </div>
-  <div class="pricing-card">
-    <h3>Word to PDF / ePub</h3><p class="price">₹20 / Page</p>
-    <ul><li>Professional formatting</li><li>Universal compatibility</li><li>Editable support</li><li>Quick delivery</li></ul>
-  </div>
-</div>
+<section id="why" class="why">
+<h2 class="section-title">Why Choose Us</h2>
+<ul>
+<li>✔ Dedicated Production Team</li>
+<li>✔ Quick Turnaround & Scalable Workflow</li>
+<li>✔ Cost-effective Offshore Support</li>
+<li>✔ 100% Quality Assurance</li>
+<li>✔ International Publishing Standards</li>
+</ul>
 </section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-<h2>About Us</h2>
-<p><strong>Py Epublishing Solutions</strong> provides high-quality creative and digital publishing services. We help businesses, brands, and creators present their content professionally.</p>
-<p>We specialize in logos, thumbnails, posters, banners, PDFs, and ePub files using advanced tools and skilled designers.</p>
-<p>Our mission is to combine creativity and technology to deliver visually stunning and effective digital content.</p>
-<p>We believe in timely delivery, quality output, and excellent customer support for every project.</p>
+<section id="portfolio" class="portfolio">
+<h2 class="section-title">Portfolio Samples</h2>
+<p>Before & After Conversion Samples Available Upon Request</p>
+<img src="https://picsum.photos/300/200" alt="Sample 1">
+<img src="https://picsum.photos/301/200" alt="Sample 2">
+<img src="https://picsum.photos/302/200" alt="Sample 3">
 </section>
 
-<!-- CONTACT -->
-<section class="section" id="contact">
-<h2>Contact Us</h2>
-<p>Reach us via email or WhatsApp for any inquiries or quotes for your projects.</p>
-<p>📧 Email: <a href="mailto:Pyepubsolutions@gmail.com" style="color:#a855f7;">Pyepubsolutions@gmail.com</a></p>
-<p>📱 WhatsApp: <a href="https://wa.me/919385315022" style="color:#a855f7;">+91 93853 15022</a></p>
-<p>We respond promptly and are ready to assist with your design and publishing needs.</p>
+<section id="contact" class="contact">
+<h2 class="section-title">Contact Us</h2>
+<p>Email: info@pyepublishingsolutions.com</p>
+<p>Location: Chennai, India</p>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+<button type="submit" class="btn">Send Message</button>
+</form>
 </section>
 
-<footer>© 2026 Py Epublishing Solutions. All rights reserved.</footer>
+<footer>
+<p>© 2026 Py Epublishing Solutions. All Rights Reserved.</p>
+</footer>
 
-<script>
-// Mobile menu
-function openMenu(){document.getElementById("mobileMenu").classList.add("active");}
-function closeMenu(){document.getElementById("mobileMenu").classList.remove("active");}
-
-// Typing hero effect
-const textArray=["Logos","Thumbnails","Posters","Documents"],typing=document.getElementById("typing");
-let i=0,j=0,isDeleting=false;
-function typeEffect(){if(i<textArray.length){if(!isDeleting&&j<=textArray[i].length){typing.textContent=textArray[i].substring(0,j++);}
-if(isDeleting&&j>=0){typing.textContent=textArray[i].substring(0,j--);}
-if(j==textArray[i].length){isDeleting=true;}
-if(isDeleting&&j==0){isDeleting=false;i++;}
-if(i==textArray.length){i=0;}}setTimeout(typeEffect,100);}
-typeEffect();
-</script>
 </body>
 </html>
