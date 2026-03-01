@@ -3,152 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Py Epublishing Solutions | UK & US Publishing Partner</title>
-<meta name="description" content="UK & US focused EPUB and XML production partner providing scalable offshore publishing services.">
+<title>EPUB Conversion UK | XML Services USA | Py Epublishing Solutions</title>
+<meta name="description" content="Professional EPUB conversion services for UK publishers and XML services for USA journals. Offshore publishing partner providing scalable, high-quality digital production.">
+<meta name="keywords" content="EPUB conversion UK, XML services USA, JATS XML conversion, Kindle formatting services, offshore publishing company">
+<meta name="author" content="Py Epublishing Solutions">
+<meta property="og:title" content="EPUB Conversion UK & XML Services USA">
+<meta property="og:description" content="Scalable offshore EPUB and XML production partner serving UK & US publishers.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 html{scroll-behavior:smooth}
 body{background:#f8fafc;color:#1a1a1a;line-height:1.7}
-header{background:#0f172a;color:#fff;padding:20px 8%;position:sticky;top:0;z-index:1000}
-header h1{font-size:26px;font-weight:700}
-nav{margin-top:8px}
-nav a{color:#cbd5e1;margin-right:20px;text-decoration:none;font-size:14px;font-weight:500}
+.container{width:100%;max-width:1200px;margin:auto}
+header{background:#0f172a;color:#fff;padding:18px 5%;position:sticky;top:0;z-index:1000}
+.header-flex{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:20px}
+nav{display:flex;gap:20px}
+nav a{color:#cbd5e1;text-decoration:none;font-size:14px}
 nav a:hover{color:#fff}
-.hero{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;padding:120px 8%;text-align:center}
-.hero h2{font-size:44px;margin-bottom:20px;font-weight:700}
-.hero p{max-width:800px;margin:auto;margin-bottom:35px;color:#cbd5e1}
-.btn{background:#2563eb;color:#fff;padding:14px 30px;text-decoration:none;border-radius:6px;font-weight:600;transition:0.3s}
+.menu-toggle{display:none;font-size:24px;cursor:pointer}
+
+.hero{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;padding:100px 5%;text-align:center}
+.hero h2{font-size:38px;margin-bottom:20px}
+.hero p{max-width:750px;margin:auto;margin-bottom:30px;color:#cbd5e1}
+.btn{background:#2563eb;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:600;display:inline-block}
 .btn:hover{background:#1d4ed8}
-section{padding:90px 8%}
-.section-title{text-align:center;margin-bottom:50px;font-size:32px;font-weight:700}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-.card{background:#fff;padding:30px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.05);transition:0.3s}
-.card:hover{transform:translateY(-6px)}
-.card h3{margin-bottom:15px;color:#0f172a}
+
+section{padding:80px 5%}
+.section-title{text-align:center;margin-bottom:45px;font-size:28px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.05);opacity:0;transform:translateY(40px);transition:all 0.6s ease}
+.card.visible{opacity:1;transform:translateY(0)}
+.card h3{margin-bottom:12px;font-size:18px}
 .card ul{list-style:none}
-.card ul li{margin-bottom:10px;color:#475569}
+.card ul li{margin-bottom:8px;font-size:14px;color:#475569}
+
 .why{background:#f1f5f9}
 .why ul{max-width:900px;margin:auto;list-style:none;text-align:center}
-.why ul li{margin-bottom:15px;font-size:17px}
+.why ul li{margin-bottom:12px}
+
 .contact{text-align:center}
-.contact form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:18px}
-.contact input,.contact textarea{padding:14px;border:1px solid #cbd5e1;border-radius:6px;font-size:14px}
-footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:25px;margin-top:40px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:14px 20px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,0.2)}
-@media(max-width:768px){.hero h2{font-size:30px}}
+.contact form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:16px}
+.contact input,.contact textarea{padding:14px;border:1px solid #cbd5e1;border-radius:6px;font-size:14px;width:100%}
+footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:25px;font-size:14px}
+
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,0.2)}
+
+/* Mobile */
+@media(max-width:768px){
+nav{display:none;flex-direction:column;background:#0f172a;padding:15px;position:absolute;top:60px;right:5%;border-radius:8px}
+nav.active{display:flex}
+.menu-toggle{display:block;color:#fff}
+.hero h2{font-size:24px}
+}
 </style>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "Py Epublishing Solutions",
+"url": "https://pyepublishingsolutions.com",
+"contactPoint": {
+"@type": "ContactPoint",
+"telephone": "+919385315022",
+"contactType": "customer service"
+}
+}
+</script>
+
 </head>
 <body>
 
 <header>
+<div class="container header-flex">
 <h1>Py Epublishing Solutions</h1>
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav id="navMenu">
 <a href="#services">Services</a>
 <a href="#pricing">Pricing</a>
 <a href="#why">Why Us</a>
 <a href="#contact">Contact</a>
 </nav>
+</div>
 </header>
 
 <section class="hero">
-<h2>UK & US Focused Offshore EPUB & XML Production Partner</h2>
-<p>Supporting independent publishers, university presses, academic journals, and digital-first publishing houses across the United Kingdom and United States. We deliver structured, scalable, and cost-efficient EPUB, XML, and typesetting workflows aligned with international production standards. Based in Chennai, India with flexible overlap for UK & US time zones.</p>
+<div class="container">
+<h2>Professional EPUB Conversion UK & XML Services USA</h2>
+<p>Trusted offshore publishing partner delivering JATS XML conversion, Kindle formatting, and high-quality EPUB production for UK publishers and US academic journals.</p>
 <a href="#contact" class="btn">Request Project Discussion</a>
+</div>
 </section>
 
 <section id="services">
-<h2 class="section-title">Core Publishing Services</h2>
+<div class="container">
+<h2 class="section-title">Core Services</h2>
 <div class="services">
 <div class="card">
-<h3>EPUB & eBook Production</h3>
+<h3>EPUB Conversion UK</h3>
 <ul>
-<li>Reflowable & Fixed Layout EPUB 2/3</li>
-<li>Kindle KPF & Amazon Ready Files</li>
-<li>WCAG Accessibility Compliance</li>
-<li>Comprehensive eBook QA Validation</li>
+<li>Reflowable & Fixed Layout EPUB</li>
+<li>Kindle & Amazon KPF</li>
+<li>Accessibility Compliance</li>
 </ul>
 </div>
 <div class="card">
-<h3>Scholarly & Journal XML</h3>
+<h3>XML Services USA</h3>
 <ul>
-<li>JATS & BITS XML Conversion</li>
-<li>Custom DTD & Schema Tagging</li>
-<li>High-Volume Journal Processing</li>
-<li>Automated XML Workflow Support</li>
+<li>JATS & BITS XML</li>
+<li>Journal Article Processing</li>
+<li>Custom DTD Conversion</li>
 </ul>
 </div>
 <div class="card">
-<h3>Typesetting & Print Production</h3>
+<h3>Typesetting & Print</h3>
 <ul>
-<li>Print-Ready PDF (InDesign Workflow)</li>
-<li>Book & Journal Composition</li>
-<li>Cover & Marketing Layout Design</li>
-<li>Word to Professional Publishing PDF</li>
+<li>Print-Ready PDF</li>
+<li>Book Layout</li>
+<li>Professional Composition</li>
 </ul>
+</div>
 </div>
 </div>
 </section>
 
-<section id="pricing">
-<h2 class="section-title">Flexible Engagement Models</h2>
-<div class="services">
-<div class="card">
-<h3>Per Page Model</h3>
+<section id="pricing" class="why">
+<div class="container">
+<h2 class="section-title">Flexible Pricing</h2>
 <ul>
-<li>Standard EPUB from $1 per page</li>
-<li>Bulk Discount for 500+ pages</li>
-<li>Dedicated QC Included</li>
+<li>✔ EPUB from $1 per page</li>
+<li>✔ XML per article custom quote</li>
+<li>✔ Monthly retainer available</li>
+<li>✔ Dedicated QC workflow</li>
 </ul>
-</div>
-<div class="card">
-<h3>Per Article Model</h3>
-<ul>
-<li>Journal XML Custom Quote</li>
-<li>Structured Metadata Handling</li>
-<li>Rapid Turnaround Workflow</li>
-</ul>
-</div>
-<div class="card">
-<h3>Enterprise Partnership</h3>
-<ul>
-<li>Monthly Retainer / Overflow Support</li>
-<li>Confidential NDA-Based Workflow</li>
-<li>Dedicated Production Team</li>
-</ul>
-</div>
 </div>
 </section>
 
-<section id="why" class="why">
-<h2 class="section-title">Why UK & US Publishers Work With Us</h2>
+<section id="why">
+<div class="container">
+<h2 class="section-title">Why Choose Us</h2>
 <ul>
-<li>✔ Structured, Documented Production Workflow</li>
-<li>✔ Multi-Level Quality Assurance Process</li>
-<li>✔ Cost-Effective Offshore Production Advantage</li>
-<li>✔ Secure File Transfer & Confidential Handling</li>
-<li>✔ Experienced Team in Academic & Trade Publishing</li>
-<li>✔ Time Zone Overlap for UK & US Clients</li>
+<li>✔ UK & US Time Zone Support</li>
+<li>✔ Secure File Handling</li>
+<li>✔ Structured QA Process</li>
+<li>✔ Scalable Offshore Production</li>
 </ul>
+</div>
 </section>
 
 <section id="contact" class="contact">
-<h2 class="section-title">Start Your Next Publishing Project</h2>
+<div class="container">
+<h2 class="section-title">Start Your Project</h2>
 <p><strong>Email:</strong> info@pyepublishingsolutions.com</p>
-<p><strong>Location:</strong> Chennai, India</p>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea rows="5" placeholder="Project Details" required></textarea>
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Project Details" required></textarea>
 <button type="submit" class="btn">Send Inquiry</button>
 </form>
+</div>
 </section>
 
 <footer>
-<p>© 2026 Py Epublishing Solutions. Serving UK & US Publishers Worldwide.</p>
+<p>© 2026 Py Epublishing Solutions | EPUB Conversion UK | XML Services USA</p>
 </footer>
 
-<a href="https://wa.me/919385315022" class="whatsapp">WhatsApp +91 93853 15022</a>
+<a href="https://wa.me/919385315022" class="whatsapp">WhatsApp</a>
+
+<script defer>
+function toggleMenu(){
+document.getElementById('navMenu').classList.toggle('active');
+}
+
+// Fade-in animation
+const cards=document.querySelectorAll('.card');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('visible');}
+});
+},{threshold:0.2});
+cards.forEach(card=>observer.observe(card));
+</script>
 
 </body>
 </html>
